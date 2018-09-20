@@ -1,1 +1,0 @@
-15:18:29.861 skipping bootstrap configuration for env: mock - could not find or read file: karate-config-mock.js, prefix: CLASSPATH

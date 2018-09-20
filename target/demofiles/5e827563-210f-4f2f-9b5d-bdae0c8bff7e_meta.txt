@@ -1,1 +1,0 @@
-{"id":"5e827563-210f-4f2f-9b5d-bdae0c8bff7e","filename":"karate-logo.jpg","message":"image test","contentType":"image/jpg"}

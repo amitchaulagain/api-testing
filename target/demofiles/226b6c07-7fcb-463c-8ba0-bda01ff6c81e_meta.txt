@@ -1,1 +1,0 @@
-{"id":"226b6c07-7fcb-463c-8ba0-bda01ff6c81e","filename":"myFile","message":"hello world","contentType":"application/octet-stream"}
