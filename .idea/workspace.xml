@@ -3,91 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d8372e0b-fe02-4f75-bfdd-c68480bb1eb0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callarray/CallJsonArrayRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callarray/call-json-array.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callarray/kitten-create.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callarray/kittens.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calldynamic/CallDynamicJsonRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calldynamic/call-dynamic-json.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calldynamic/get-cat.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/CallFeatureRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/call-feature.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/called-arg.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/called-normal.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/create-cats-outline.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callfeature/create-two-cats.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callonce/CallOnceRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/callonce/call-once.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calltable/CallTableRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calltable/call-table.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/calltable/kitten-create.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/CatsJava.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/CatsPutRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/CatsRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/CatsUiRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/CatsXmlRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/KittensRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/SyntaxRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/billie-expected.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/cats-put.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/cats-xml.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/cats.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/kittens.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cats/syntax-demo.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cookies/CookiesRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/cookies/cookies.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/delete/DeleteRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/delete/delete.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/dogs/DogsRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/dogs/dogs.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/encoding/EncodingRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/encoding/encoding.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/error/ErrorRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/error/error.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/gatling/KarateSimulation.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/Consumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/ConsumerIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/ConsumerUsingMockTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/ConsumerUsingProxyHttpTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/ConsumerUsingProxyRewriteSslTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/ConsumerUsingProxyRewriteTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/Payment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceContractSslTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceContractTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceContractUsingMockSslTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceContractUsingMockTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceMockMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/PaymentServiceMockSslMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/QueueConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/QueueUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/QueueUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/Shipment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/increment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/payment-service-mock.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/payment-service-proxy.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/payment-service.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/contract/payments.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/micro/MicroMockRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/micro/WebMockRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/micro/cats-mock.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/micro/cats.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/micro/web.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/DemoMockProceedRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/DemoMockProxyRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/DemoMockRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/DemoMockSslRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/DemoMockUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/demo-mock-proceed.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/demo-mock.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/proxy/increment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/web/cats-mock.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/web/cats-test.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mock/web/cats.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssl/SslTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssl/TestService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssl/ssl-keystore.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssl/ssl-truststore.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/search/SearchRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/search/dynamic-params.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/search/get-response-param.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/search/search-complex.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/search/search-simple.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/signin/SignInRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/signin/sign-in.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/soap/SoapRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/soap/SoapStandaloneRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/soap/expected.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/soap/request.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/soap/soap.feature" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -237,17 +164,17 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="feature" value="3" />
+          <entry key="feature" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
           <entry key="rtf" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Cucumber" value="3" />
-          <entry key="JAVA" value="1" />
+          <entry key="Cucumber" value="4" />
+          <entry key="JAVA" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -282,11 +209,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/demo/upload/upload.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/test.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/TestRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -447,6 +392,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="headers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="cucumber-html-reports" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -463,7 +428,7 @@
     <property name="SearchEverywhereHistoryKey" value="transaction.fea&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;Demo&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/test/java/demo/DemoTestParallel.java&#10;DogCOn&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;Jdb&#9;FILE&#9;jar:///Users/admin/.m2/repository/org/springframework/spring-jdbc/4.3.8.RELEASE/spring-jdbc-4.3.8.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class&#10;demoBaseUrl&#9;null&#9;null&#10;transaction-delete.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-delete.graphql&#10;users&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;transaction.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-update.json&#10;transaction-get-by-id.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-get-by-id.graphql&#10;transaction-update.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-update.graphql&#10;transaction-create.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-create.graphql&#10;sample.js&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/read/sample.json&#10;.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-1.json&#10;graphql.fe&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/graphql.feature&#10;tra&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;user&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;DogsC&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;pom.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/pom.xml&#10;pom&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/pom.xml&#10;Dogs&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;transaction&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;users.f&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;graphql.f&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/graphql.feature&#10;headers.js&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/headers.js&#10;common.fea&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/headers/common.feature&#10;transaction.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction.graphql&#10;by-name&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;by-name.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;demoBa&#9;null&#9;null&#10;grap&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;graphql-1.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-1.json&#10;graphql-2.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-2.json&#10;users.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;demoBas&#9;null&#9;null&#10;feature.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/target/cucumber-html-reports/overview-features.html&#10;CatsCont&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/CatsController.java&#10;DOgsCon&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;CatsCon&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/CatsController.java&#10;DogsCOn&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;DogsCon&#9;PSI&#9;JAVA://com.intuit.karate.demo.controller.DogsController" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537440191723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537440602471" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -490,7 +455,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.overview-features.html">
+  <component name="RunManager" selected="JUnit.DemoTestParallel">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -598,8 +563,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.overview-features.html" />
         <item itemvalue="JUnit.DemoTestParallel" />
+        <item itemvalue="JavaScript Debug.overview-features.html" />
         <item itemvalue="JUnit.DemoTest" />
         <item itemvalue="JUnit.ServerStart" />
         <item itemvalue="JUnit.ServerStop" />
@@ -646,12 +611,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DemoTestParallel - 2018.09.20 at 15h 21m 16s.xml">
-      <configuration name="DemoTestParallel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoTestParallel - 2018.09.20 at 15h 24m 13s.xml">
-      <configuration name="DemoTestParallel" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DemoTestParallel - 2018.09.20 at 15h 30m 03s.xml">
       <configuration name="DemoTestParallel" configurationId="JUnit" />
     </history-entry>
@@ -676,9 +635,15 @@
     <history-entry file="DemoTestParallel - 2018.09.20 at 16h 26m 58s.xml">
       <configuration name="DemoTestParallel" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 16h 28m 40s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 16h 32m 29s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91218000" />
+    <option name="totallyTimeSpent" value="91539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -691,7 +656,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2768903" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -798,24 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/cookies/cookies.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/test.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -1102,8 +1052,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/upload/upload.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/test.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
