@@ -40,7 +40,8 @@ public class Application {
     }
 	
 	public static ConfigurableApplicationContext run(String[] args) {
-		return SpringApplication.run(Application.class, args);
+//		return SpringApplication.run(Application.class, args);
+		return null;
 	}
 	
 }

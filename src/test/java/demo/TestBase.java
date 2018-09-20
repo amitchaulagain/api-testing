@@ -25,7 +25,7 @@ public abstract class TestBase {
     
     @BeforeClass
     public static void beforeClass() throws Exception {
-       startServer();
+       //startServer();
     }
     
 }
