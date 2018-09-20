@@ -2,13 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8372e0b-fe02-4f75-bfdd-c68480bb1eb0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/DemoTestParallel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/demo/DemoTestParallel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/TestBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/demo/graphql/GraphqlRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/demo/graphql/GraphqlRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/MonitorThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/ServerStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/ServerStop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Stoppable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/config/ServerStartedInitializingBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/config/TomcatConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/CatsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/DogsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/EchoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/EncodingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/GraphqlController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/HeadersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/RedirectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/SearchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/SignInController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/SoapController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/controller/UploadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/Cat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/Dog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/FileInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/SignIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/util/DbUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/util/FileChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/util/JavaDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/util/SchemaUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql-1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/graphql-2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/soap-1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/soap-2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -145,22 +172,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="76" />
-          <entry key="java" value="20" />
+          <entry key="java" value="27" />
           <entry key="rtf" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="20" />
+          <entry key="JAVA" value="27" />
           <entry key="PLAIN_TEXT" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="feature" value="8" />
+          <entry key="feature" value="11" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="12" />
+          <entry key="java" value="17" />
           <entry key="js" value="3" />
           <entry key="rtf" value="1" />
         </counts>
@@ -168,8 +195,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="Cucumber" value="8" />
-          <entry key="JAVA" value="12" />
+          <entry key="Cucumber" value="11" />
+          <entry key="JAVA" value="17" />
           <entry key="JavaScript" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
@@ -178,10 +205,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTestParallel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="425">
               <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -191,10 +218,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/demo/test/test.feature">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/graphql/GraphqlStandaloneRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            <state relative-caret-position="153">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/TransactionsRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTestSelected.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/test-classes/demo/users/users.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/users/users.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -209,28 +281,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/transactions.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1983">
               <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -269,7 +332,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/domain/Cat.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/calltable/call-table.feature" />
         <option value="$PROJECT_DIR$/src/test/java/demo/cats/CatsRunner.java" />
-        <option value="$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/transactions/TransactionsRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/users/users.feature" />
         <option value="$PROJECT_DIR$/src/main/resources/graphql-1.json" />
@@ -300,6 +362,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/intuit/karate/demo/Application.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/demo/DemoTestParallel.java" />
+        <option value="$PROJECT_DIR$/src/test/java/demo/DemoTestSelected.java" />
+        <option value="$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java" />
       </list>
     </option>
   </component>
@@ -361,19 +425,6 @@
               <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
               <item name="api-testing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,6 +442,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="transactions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-testing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -407,7 +476,7 @@
     <property name="SearchEverywhereHistoryKey" value="transaction.fea&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;Demo&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/test/java/demo/DemoTestParallel.java&#10;DogCOn&#9;FILE&#9;file:///Users/admin/karate-backup/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;Jdb&#9;FILE&#9;jar:///Users/admin/.m2/repository/org/springframework/spring-jdbc/4.3.8.RELEASE/spring-jdbc-4.3.8.RELEASE.jar!/org/springframework/jdbc/core/JdbcTemplate.class&#10;demoBaseUrl&#9;null&#9;null&#10;transaction-delete.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-delete.graphql&#10;users&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;transaction.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-update.json&#10;transaction-get-by-id.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-get-by-id.graphql&#10;transaction-update.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-update.graphql&#10;transaction-create.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction-create.graphql&#10;sample.js&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/read/sample.json&#10;.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-1.json&#10;graphql.fe&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/graphql.feature&#10;tra&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;user&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;DogsC&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;pom.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/pom.xml&#10;pom&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/pom.xml&#10;Dogs&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;transaction&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transactions.feature&#10;users.f&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;graphql.f&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/graphql.feature&#10;headers.js&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/headers.js&#10;common.fea&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/headers/common.feature&#10;transaction.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/transactions/transaction.graphql&#10;by-name&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;by-name.graphql&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;demoBa&#9;null&#9;null&#10;grap&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/graphql/by-name.graphql&#10;graphql-1.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-1.json&#10;graphql-2.json&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/resources/graphql-2.json&#10;users.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/test/java/demo/users/users.feature&#10;demoBas&#9;null&#9;null&#10;feature.&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/target/cucumber-html-reports/overview-features.html&#10;CatsCont&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/CatsController.java&#10;DOgsCon&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;CatsCon&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/CatsController.java&#10;DogsCOn&#9;FILE&#9;file:///Users/admin/rew3-testing/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/DogsController.java&#10;DogsCon&#9;PSI&#9;JAVA://com.intuit.karate.demo.controller.DogsController" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537443515002" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537444072253" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -592,18 +661,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DemoTestParallel - 2018.09.20 at 16h 36m 18s.xml">
-      <configuration name="DemoTestParallel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoTestParallel - 2018.09.20 at 16h 38m 28s.xml">
-      <configuration name="DemoTestParallel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoTestParallel_testParallel - 2018.09.20 at 16h 44m 52s.xml">
-      <configuration name="DemoTestParallel.testParallel" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoTestParallel_testParallel - 2018.09.20 at 16h 46m 22s.xml">
-      <configuration name="DemoTestParallel.testParallel" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DemoTestParallel_testParallel - 2018.09.20 at 16h 47m 34s.xml">
       <configuration name="DemoTestParallel.testParallel" configurationId="JUnit" />
     </history-entry>
@@ -622,9 +679,21 @@
     <history-entry file="DemoTestParallel_testParallel - 2018.09.20 at 16h 52m 22s.xml">
       <configuration name="DemoTestParallel.testParallel" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 17h 23m 35s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 17h 27m 41s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 17h 28m 25s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTestParallel - 2018.09.20 at 17h 29m 10s.xml">
+      <configuration name="DemoTestParallel" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92849000" />
+    <option name="totallyTimeSpent" value="93356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -649,7 +718,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32971996" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.55644304" weight="0.41734418" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.55644304" visible="true" weight="0.41734418" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39927733" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -657,7 +726,7 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32971996" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.34688348" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.44355696" side_tool="true" weight="0.41734418" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32881662" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32881662" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
@@ -729,18 +798,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/dogs/dogs.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/cats/billie-expected.json" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/read/read-files.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/cats/cats-put.feature" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/graphql-1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/read/sample.json" />
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/transaction-update.graphql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -752,13 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/users/users.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" selection-start-line="19" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -828,13 +878,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/gatling/KarateSimulation.scala" />
     <entry file="file://$PROJECT_DIR$/src/test/java/mock/micro/cats.feature" />
     <entry file="file://$PROJECT_DIR$/src/test/java/mock/micro/cats-mock.feature" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/TransactionsRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/ServerStop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -846,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10914">
           <caret line="697" column="7" selection-start-line="697" selection-start-column="7" selection-end-line="697" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/transactions.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -959,18 +995,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1983">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTestParallel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="425">
           <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/graphql/GraphqlRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/graphql/GraphqlStandaloneRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/TransactionsRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/DemoTestSelected.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/test-classes/demo/users/users.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/users/users.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/transactions/transactions.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/demo/users/UsersRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
