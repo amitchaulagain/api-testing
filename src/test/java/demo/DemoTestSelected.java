@@ -19,7 +19,7 @@ public class DemoTestSelected {
     
     @BeforeClass
     public static void beforeClass() throws Exception {
-        TestBase.beforeClass();
+        //TestBase.beforeClass();
     }     
 
     @Test
