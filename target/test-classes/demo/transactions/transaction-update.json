@@ -1,0 +1,59 @@
+{  "id":"5ba1f9730d0000243c7c3000",
+  "updateTransaction": {
+    "name": "Car Mechanics",
+    "description": "big space with power backup facilities",
+    "price_detail": {
+      "list_price": 10000,
+      "sell_price": 9000
+    },
+    "transaction_type": "BUY",
+    "property_id": "7aa97b1a78ee4505cc03ac4",
+    "accepted_date": "2017-12-26",
+    "transaction_status": "PAYMENT",
+    "transaction_date": "2018-03-15",
+    "closing_date": "2018-03-25",
+    "listed_on": "2017-02-27",
+    "closing_status": "RE_CLOSE",
+    "visibility": {
+      "visibility_type": "INDIVIDUAL",
+      "individual_visibility": {
+        "_id": "5aa99b1a0e055nm01ef03ac5",
+        "first_name": "Rio",
+        "last_name": "Heart"
+      }
+    },
+    "transaction_buyer": [
+      {
+        "_id": "6aa97b1a0e11225603nc2",
+        "first_name": "Remo",
+        "last_name": "Black"
+      }
+    ],
+    "transaction_seller": [
+      {
+        "_id": "5aa99b1a0e055nm01ef03ac5",
+        "first_name": "Rio",
+        "last_name": "Heart"
+      },
+      {
+        "_id": "5aa33b1a0e0766b01ef09ac9",
+        "first_name": "Jett",
+        "last_name": "Turing"
+      }
+    ],
+    "transaction_agent": [
+      {
+        "_id": "80a97b1a0e0033771ef03ac0",
+        "first_name": "Katie",
+        "last_name": "Cruise"
+      },
+      {
+        "_id": "5aa97b1a090000b015503ac7",
+        "first_name": "Maria",
+        "last_name": "Tetovo"
+      }
+    ],
+    "side": "BUYING",
+    "status": "ACTIVE"
+  }
+}

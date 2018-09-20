@@ -1,0 +1,117 @@
+13:17:34.660 request:
+1 > POST http://127.0.0.1:58351/files
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: multipart/form-data; boundary=F0sRmd6bLcVw45J-NKmOv0H3_iya_N2ZLiOqRJ
+1 > Host: 127.0.0.1:58351
+1 > Transfer-Encoding: chunked
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:34.672 response time in milliseconds: 11
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":"c4787f35-8283-4f62-9912-f04df6ac4cff","filename":"myFile","message":"hello world","contentType":"application/octet-stream"}
+
+13:17:34.678 request:
+2 > GET http://127.0.0.1:58351/files/c4787f35-8283-4f62-9912-f04df6ac4cff
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:34.686 response time in milliseconds: 8
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Disposition: attachment; filename="myFile"
+2 < Content-Length: 6514
+2 < Content-Type: application/octet-stream
+2 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+
+13:17:34.729 request:
+1 > POST http://127.0.0.1:58351/files
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: multipart/form-data; boundary=EZkYo1vJifsxCfUroFauJW--gcF3kz6CIRGYml1I
+1 > Host: 127.0.0.1:58351
+1 > Transfer-Encoding: chunked
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:34.736 response time in milliseconds: 6
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":"f81d8b04-4980-4a7f-b40a-e678d503547f","filename":"upload-name.pdf","message":"hello world","contentType":"application/pdf"}
+
+13:17:34.738 request:
+2 > GET http://127.0.0.1:58351/files/f81d8b04-4980-4a7f-b40a-e678d503547f
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:34.741 response time in milliseconds: 3
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Disposition: attachment; filename="upload-name.pdf"
+2 < Content-Length: 6514
+2 < Content-Type: application/pdf
+2 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+
+13:17:34.789 request:
+1 > POST http://127.0.0.1:58351/files/mixed
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: multipart/mixed; boundary=YZBFkdYvxwzx6ruwVWCNzXEZhapYRRU4HEVCfErS
+1 > Host: 127.0.0.1:58351
+1 > Transfer-Encoding: chunked
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:34.817 response time in milliseconds: 27
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":"cb7a715c-d20c-4d87-a1e5-a6f8d2c0a579","filename":"upload-name.pdf","message":"hello world","contentType":"application/pdf"}
+
+e.properties['demo.proxy.port']
+    karate.configure('proxy', 'http://127.0.0.1:' + proxyPort);
+  }
+  if (karate.env != 'mock' && karate.env != 'proxy' && karate.env != 'contract') {
+    // 'callSingle' is guaranteed to run only once even across all threads
+    var result = karate.callSingle('classpath:demo/headers/common-noheaders.feature', config);
+    // and it sets a variable called 'authInfo' used in headers-single.feature
+    config.authInfo = { authTime: result.time, authToken: result.token };
+  }
+  return config;
+}

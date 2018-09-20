@@ -1,0 +1,761 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15063198,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 26034126,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027signin\u0027, \u0027token\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027, \u0027token\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 34938467,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 8,
+              "value": "13:17:34.342 request:\n1 \u003e GET http://127.0.0.1:58351/signin/token\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.375 response time in milliseconds: 32\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 36\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Set-Cookie: JSESSIONID\u003dB02A05E421587BB60837E57B48E1BBA8; Path\u003d/; HttpOnly\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\nd9ccdd67-64d8-4c27-9e85-afd47ff7c7ef\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 103538,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61861,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "header X-CSRF-TOKEN \u003d response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "X-CSRF-TOKEN",
+                  "offset": 7
+                },
+                {
+                  "val": "response",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "html url encoded form submit - post",
+        "description": "",
+        "id": "csrf-and-sign-in-end-point;html-url-encoded-form-submit---post",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6054915,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "path \u0027signin\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3720741,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "form field username \u003d \u0027john\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "username",
+                  "offset": 11
+                },
+                {
+                  "val": "\u0027john\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.formField(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7336852,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "form field password \u003d \u0027secret\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u0027secret\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.formField(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13002069,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 16,
+              "value": "13:17:34.397 request:\n2 \u003e POST http://127.0.0.1:58351/signin\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Content-Length: 29\n2 \u003e Content-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\n2 \u003e Cookie: JSESSIONID\u003dB02A05E421587BB60837E57B48E1BBA8\n2 \u003e Host: 127.0.0.1:58351\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n2 \u003e X-CSRF-TOKEN: d9ccdd67-64d8-4c27-9e85-afd47ff7c7ef\nusername\u003djohn\u0026password\u003dsecret\n\n13:17:34.408 response time in milliseconds: 10\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Length: 7\n2 \u003c Content-Type: text/plain;charset\u003dUTF-8\n2 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\nsuccess\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 233846,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3664914,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "match response \u003d\u003d \u0027success\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027success\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10732791,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 339745,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027signin\u0027, \u0027token\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027, \u0027token\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10255381,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 8,
+              "value": "13:17:34.428 request:\n1 \u003e GET http://127.0.0.1:58351/signin/token\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.436 response time in milliseconds: 7\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 36\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Set-Cookie: JSESSIONID\u003d2D92A155B0A3DA130AAB7A9C2249F9FA; Path\u003d/; HttpOnly\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\nb3d88a05-1a86-4061-996b-48d7d9e3d379\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 64874,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "header X-CSRF-TOKEN \u003d response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "X-CSRF-TOKEN",
+                  "offset": 7
+                },
+                {
+                  "val": "response",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "html url encoded form submit - get",
+        "description": "",
+        "id": "csrf-and-sign-in-end-point;html-url-encoded-form-submit---get",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3742074,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "path \u0027signin\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 264137,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "form field username \u003d \u0027john\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "username",
+                  "offset": 11
+                },
+                {
+                  "val": "\u0027john\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.formField(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 221319,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "form field password \u003d \u0027secret\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "password",
+                  "offset": 11
+                },
+                {
+                  "val": "\u0027secret\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.formField(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10804244,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 24,
+              "value": "13:17:34.444 request:\n2 \u003e GET http://127.0.0.1:58351/signin?username\u003djohn\u0026password\u003dsecret\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Cookie: JSESSIONID\u003d2D92A155B0A3DA130AAB7A9C2249F9FA\n2 \u003e Host: 127.0.0.1:58351\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n2 \u003e X-CSRF-TOKEN: b3d88a05-1a86-4061-996b-48d7d9e3d379\n\n13:17:34.453 response time in milliseconds: 7\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Length: 7\n2 \u003c Content-Type: text/plain;charset\u003dUTF-8\n2 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\nsuccess\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 95837,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 229331,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "match response \u003d\u003d \u0027success\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027success\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7969577,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 9276321,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027signin\u0027, \u0027token\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027, \u0027token\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4137324,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 8,
+              "value": "13:17:34.474 request:\n1 \u003e GET http://127.0.0.1:58351/signin/token\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.477 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 36\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Set-Cookie: JSESSIONID\u003d220EF625CBC596820D66171E30264993; Path\u003d/; HttpOnly\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n055a75cc-9f11-4e26-9a5f-b13030ad3543\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 34875,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31881,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "header X-CSRF-TOKEN \u003d response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "X-CSRF-TOKEN",
+                  "offset": 7
+                },
+                {
+                  "val": "response",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "html url encoded form submit - manually forming the request / NOT using \u0027form field\u0027",
+        "description": "",
+        "id": "csrf-and-sign-in-end-point;html-url-encoded-form-submit---manually-forming-the-request-/-not-using-\u0027form-field\u0027",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 112597,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "path \u0027signin\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027signin\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2331432,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "request \u0027username\u003djohn\u0026password\u003dsecret\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027username\u003djohn\u0026password\u003dsecret\u0027",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4098361,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "header Content-Type \u003d \u0027application/x-www-form-urlencoded\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/x-www-form-urlencoded\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4089283,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 32,
+              "value": "13:17:34.486 request:\n2 \u003e POST http://127.0.0.1:58351/signin\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Content-Length: 29\n2 \u003e Content-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\n2 \u003e Cookie: JSESSIONID\u003d220EF625CBC596820D66171E30264993\n2 \u003e Host: 127.0.0.1:58351\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n2 \u003e X-CSRF-TOKEN: 055a75cc-9f11-4e26-9a5f-b13030ad3543\nusername\u003djohn\u0026password\u003dsecret\n\n13:17:34.489 response time in milliseconds: 3\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Length: 7\n2 \u003c Content-Type: text/plain;charset\u003dUTF-8\n2 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\nsuccess\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 30324,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1220687,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "match response \u003d\u003d \u0027success\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027success\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "demo/signin/sign-in.feature",
+    "description": "csrf and sign-in end point",
+    "id": "csrf-and-sign-in-end-point",
+    "keyword": "Feature",
+    "uri": "demo/signin/sign-in.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@mock-servlet-todo"
+      }
+    ]
+  }
+]

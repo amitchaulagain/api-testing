@@ -1,0 +1,1146 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 0,
+            "name": "call [common routine that updates the configured headers and cookies] common.feature",
+            "match": {},
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "path \u0027headers\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "13:17:33.361 request:\n1 \u003e GET http://127.0.0.1:58351/headers\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.364 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 36\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Set-Cookie: time\u003d1537428753363\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n5f7f86ee-1a91-4558-8a4c-f5280e191be9\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "def time \u003d responseCookies.time.value",
+            "match": {
+              "arguments": [
+                {
+                  "val": "time",
+                  "offset": 4
+                },
+                {
+                  "val": "responseCookies.time.value",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def token \u003d response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "token",
+                  "offset": 4
+                },
+                {
+                  "val": "response",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 12,
+                "value": "# cookies are auto-configured, i.e. they \u0027persist\u0027 for subsequent HTTP calls"
+              },
+              {
+                "line": 14,
+                "value": "# if you are using \u0027shared scope\u0027: https://github.com/intuit/karate#shared-scope"
+              },
+              {
+                "line": 15,
+                "value": "# this next line will update the global scope, which is the recommended approach for re-usable sign-in / auth flows"
+              }
+            ],
+            "line": 16,
+            "name": "configure headers \u003d read(\u0027classpath:headers.js\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027classpath:headers.js\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 33729466,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# the shape of the next line is important. if the line starts with call (or callonce)"
+              },
+              {
+                "line": 6,
+                "value": "# the called script will update the \u0027global\u0027 context here in this file."
+              },
+              {
+                "line": 7,
+                "value": "# but since we assigned it to a variable here on the next line - it does not"
+              },
+              {
+                "line": 8,
+                "value": "# but we can still use the variable to get any results from the \u0027call\u0027 if required"
+              }
+            ],
+            "line": 9,
+            "name": "def setup \u003d callonce read(\u0027common.feature\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "setup",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce read(\u0027common.feature\u0027)",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.377 cached callonce: read(\u0027common.feature\u0027)\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 29075,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "fail with a 400 since the header was not set",
+        "description": "",
+        "id": "a-called-feature-will-not-clobber-the-parent-context;fail-with-a-400-since-the-header-was-not-set",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2307733,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "path \u0027headers\u0027, setup.token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027, setup.token",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 56765,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "param url \u003d demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "url",
+                  "offset": 6
+                },
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.param(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 276289179,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 15,
+              "value": "13:17:33.382 request:\n1 \u003e GET http://127.0.0.1:58351/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9?url\u003dhttp%3A%2F%2F127.0.0.1%3A58351\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.657 response time in milliseconds: 274\n1 \u003c 400\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Connection: close\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"timestamp\":1537428753655,\"status\":400,\"error\":\"Bad Request\",\"exception\":\"org.springframework.web.bind.ServletRequestBindingException\",\"message\":\"Missing cookie \u0027time\u0027 for method parameter of type String\",\"path\":\"/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 91938,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 16,
+                "value": "# error bad request"
+              }
+            ],
+            "line": 17,
+            "name": "status 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 10788675,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# the shape of the next line is important. if the line starts with call (or callonce)"
+              },
+              {
+                "line": 6,
+                "value": "# the called script will update the \u0027global\u0027 context here in this file."
+              },
+              {
+                "line": 7,
+                "value": "# but since we assigned it to a variable here on the next line - it does not"
+              },
+              {
+                "line": 8,
+                "value": "# but we can still use the variable to get any results from the \u0027call\u0027 if required"
+              }
+            ],
+            "line": 9,
+            "name": "def setup \u003d callonce read(\u0027common.feature\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "setup",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce read(\u0027common.feature\u0027)",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.669 callonce cache hit for: read(\u0027common.feature\u0027)\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 86342,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "fail with a 400 since the cookie was not set",
+        "description": "",
+        "id": "a-called-feature-will-not-clobber-the-parent-context;fail-with-a-400-since-the-cookie-was-not-set",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6522525,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "configure headers \u003d { Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "{ Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 566008,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "path \u0027headers\u0027, setup.token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027, setup.token",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 91973,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "param url \u003d demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "url",
+                  "offset": 6
+                },
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.param(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4657099,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 23,
+              "value": "13:17:33.679 request:\n1 \u003e GET http://127.0.0.1:58351/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9?url\u003dhttp%3A%2F%2F127.0.0.1%3A58351\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: 5f7f86ee-1a91-4558-8a4c-f5280e191be91537428753363http://127.0.0.1:58351\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.682 response time in milliseconds: 3\n1 \u003c 400\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Connection: close\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"timestamp\":1537428753681,\"status\":400,\"error\":\"Bad Request\",\"exception\":\"org.springframework.web.bind.ServletRequestBindingException\",\"message\":\"Missing cookie \u0027time\u0027 for method parameter of type String\",\"path\":\"/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 42613,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "status 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3115628,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# the shape of the next line is important. if the line starts with call (or callonce)"
+              },
+              {
+                "line": 6,
+                "value": "# the called script will update the \u0027global\u0027 context here in this file."
+              },
+              {
+                "line": 7,
+                "value": "# but since we assigned it to a variable here on the next line - it does not"
+              },
+              {
+                "line": 8,
+                "value": "# but we can still use the variable to get any results from the \u0027call\u0027 if required"
+              }
+            ],
+            "line": 9,
+            "name": "def setup \u003d callonce read(\u0027common.feature\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "setup",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce read(\u0027common.feature\u0027)",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.686 callonce cache hit for: read(\u0027common.feature\u0027)\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 27986,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "manually set header and cookie to pass",
+        "description": "",
+        "id": "a-called-feature-will-not-clobber-the-parent-context;manually-set-header-and-cookie-to-pass",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1878022,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "headers { Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.headers(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2180155,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "cookie time \u003d setup.time",
+            "match": {
+              "arguments": [
+                {
+                  "val": "time",
+                  "offset": 7
+                },
+                {
+                  "val": "setup.time",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefs.cookie(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 452118,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "path \u0027headers\u0027, setup.token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027, setup.token",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53807,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "param url \u003d demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "url",
+                  "offset": 6
+                },
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.param(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3956791,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 31,
+              "value": "13:17:33.693 request:\n1 \u003e GET http://127.0.0.1:58351/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9?url\u003dhttp%3A%2F%2F127.0.0.1%3A58351\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: 5f7f86ee-1a91-4558-8a4c-f5280e191be91537428753363http://127.0.0.1:58351\n1 \u003e Connection: Keep-Alive\n1 \u003e Cookie: time\u003d1537428753363\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.696 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 0\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 48450,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3312954,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# the shape of the next line is important. if the line starts with call (or callonce)"
+              },
+              {
+                "line": 6,
+                "value": "# the called script will update the \u0027global\u0027 context here in this file."
+              },
+              {
+                "line": 7,
+                "value": "# but since we assigned it to a variable here on the next line - it does not"
+              },
+              {
+                "line": 8,
+                "value": "# but we can still use the variable to get any results from the \u0027call\u0027 if required"
+              }
+            ],
+            "line": 9,
+            "name": "def setup \u003d callonce read(\u0027common.feature\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "setup",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce read(\u0027common.feature\u0027)",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.700 callonce cache hit for: read(\u0027common.feature\u0027)\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 30431,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "alternative way of setting headers and cookies 1",
+        "description": "",
+        "id": "a-called-feature-will-not-clobber-the-parent-context;alternative-way-of-setting-headers-and-cookies-1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 898500,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "configure headers \u003d { Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "{ Authorization: \u0027#(setup.token + setup.time + demoBaseUrl)\u0027 }",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2487244,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "configure cookies \u003d { time: \u0027#(setup.time)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cookies",
+                  "offset": 10
+                },
+                {
+                  "val": "{ time: \u0027#(setup.time)\u0027 }",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 337881,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "path \u0027headers\u0027, setup.token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027, setup.token",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 44719,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "param url \u003d demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "url",
+                  "offset": 6
+                },
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.param(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4201194,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 39,
+              "value": "13:17:33.706 request:\n1 \u003e GET http://127.0.0.1:58351/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9?url\u003dhttp%3A%2F%2F127.0.0.1%3A58351\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: 5f7f86ee-1a91-4558-8a4c-f5280e191be91537428753363http://127.0.0.1:58351\n1 \u003e Connection: Keep-Alive\n1 \u003e Cookie: time\u003d1537428753363\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.709 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 0\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 85688,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15232258,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 5,
+                "value": "# the shape of the next line is important. if the line starts with call (or callonce)"
+              },
+              {
+                "line": 6,
+                "value": "# the called script will update the \u0027global\u0027 context here in this file."
+              },
+              {
+                "line": 7,
+                "value": "# but since we assigned it to a variable here on the next line - it does not"
+              },
+              {
+                "line": 8,
+                "value": "# but we can still use the variable to get any results from the \u0027call\u0027 if required"
+              }
+            ],
+            "line": 9,
+            "name": "def setup \u003d callonce read(\u0027common.feature\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "setup",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce read(\u0027common.feature\u0027)",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.725 callonce cache hit for: read(\u0027common.feature\u0027)\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 58721,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 42,
+        "name": "alternative way of setting headers and cookies 2",
+        "description": "",
+        "id": "a-called-feature-will-not-clobber-the-parent-context;alternative-way-of-setting-headers-and-cookies-2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 974864,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "header Authorization \u003d (setup.token + setup.time + demoBaseUrl)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Authorization",
+                  "offset": 7
+                },
+                {
+                  "val": "(setup.token + setup.time + demoBaseUrl)",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 649457,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "cookies { time: \u0027#(setup.time)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ time: \u0027#(setup.time)\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.cookies(String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 330311,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "path \u0027headers\u0027, setup.token",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027headers\u0027, setup.token",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 49043,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "param url \u003d demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "url",
+                  "offset": 6
+                },
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.param(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4101274,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 47,
+              "value": "13:17:33.730 request:\n1 \u003e GET http://127.0.0.1:58351/headers/5f7f86ee-1a91-4558-8a4c-f5280e191be9?url\u003dhttp%3A%2F%2F127.0.0.1%3A58351\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: 5f7f86ee-1a91-4558-8a4c-f5280e191be91537428753363http://127.0.0.1:58351\n1 \u003e Connection: Keep-Alive\n1 \u003e Cookie: time\u003d1537428753363\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.733 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 0\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 37034,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "demo/headers/call-isolated-config.feature",
+    "description": "a called feature will not clobber the parent context\nif the variable assignment syntax is used",
+    "id": "a-called-feature-will-not-clobber-the-parent-context",
+    "keyword": "Feature",
+    "uri": "demo/headers/call-isolated-config.feature"
+  }
+]

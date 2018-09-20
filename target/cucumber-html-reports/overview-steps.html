@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>demo</td>
+            <td>20 Sep 2018, 13:17</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">StepDefs.asssertBoolean(String)</td>
+              <td>43</td>
+              <td class="duration" data-value="179904064">179ms</td>
+              <td class="duration" data-value="4183815">004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.callAndUpdateConfigAndVars(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="169375611">169ms</td>
+              <td class="duration" data-value="84687805">084ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.callOnceAndUpdateConfigAndVars(String,String)</td>
+              <td>3</td>
+              <td class="duration" data-value="306636046">306ms</td>
+              <td class="duration" data-value="102212015">102ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.castToJson(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="25681141">025ms</td>
+              <td class="duration" data-value="12840570">012ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.configure(String,String)</td>
+              <td>33</td>
+              <td class="duration" data-value="85315517">085ms</td>
+              <td class="duration" data-value="2585318">002ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.configureDocString(String,String)</td>
+              <td>5</td>
+              <td class="duration" data-value="18090371">018ms</td>
+              <td class="duration" data-value="3618074">003ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.cookie(String,String)</td>
+              <td>10</td>
+              <td class="duration" data-value="18708840">018ms</td>
+              <td class="duration" data-value="1870884">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.cookies(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="649457">000ms</td>
+              <td class="duration" data-value="649457">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.def(String,String)</td>
+              <td>218</td>
+              <td class="duration" data-value="3068334769">3s 068ms</td>
+              <td class="duration" data-value="14074930">014ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.defDocString(String,String)</td>
+              <td>21</td>
+              <td class="duration" data-value="87617579">087ms</td>
+              <td class="duration" data-value="4172265">004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.eval(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="6121021">006ms</td>
+              <td class="duration" data-value="2040340">002ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.formField(String,String&gt;)</td>
+              <td>7</td>
+              <td class="duration" data-value="17088131">017ms</td>
+              <td class="duration" data-value="2441161">002ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.header(String,String&gt;)</td>
+              <td>42</td>
+              <td class="duration" data-value="388271675">388ms</td>
+              <td class="duration" data-value="9244563">009ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.headers(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="9982247">009ms</td>
+              <td class="duration" data-value="2495561">002ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.matchContains(String,String,String,String,String,String)</td>
+              <td>89</td>
+              <td class="duration" data-value="157098603">157ms</td>
+              <td class="duration" data-value="1765152">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.matchEquals(String,String,String,String,String)</td>
+              <td>110</td>
+              <td class="duration" data-value="476152370">476ms</td>
+              <td class="duration" data-value="4328657">004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.method(String)</td>
+              <td>234</td>
+              <td class="duration" data-value="10771694693">10s 771ms</td>
+              <td class="duration" data-value="46032883">046ms</td>
+              <td class="failed">99.57%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.multiPartFile(String,String)</td>
+              <td>5</td>
+              <td class="duration" data-value="2010233">002ms</td>
+              <td class="duration" data-value="402046">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.multiPartFiles(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1660302">001ms</td>
+              <td class="duration" data-value="1660302">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.multiPartFormField(String,String)</td>
+              <td>8</td>
+              <td class="duration" data-value="11242446">011ms</td>
+              <td class="duration" data-value="1405305">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.multiPartFormFields(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="341291">000ms</td>
+              <td class="duration" data-value="341291">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.param(String,String&gt;)</td>
+              <td>38</td>
+              <td class="duration" data-value="43954064">043ms</td>
+              <td class="duration" data-value="1156685">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.params(String)</td>
+              <td>34</td>
+              <td class="duration" data-value="44253250">044ms</td>
+              <td class="duration" data-value="1301566">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.path(String&gt;)</td>
+              <td>225</td>
+              <td class="duration" data-value="369071214">369ms</td>
+              <td class="duration" data-value="1640316">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.print(String&gt;)</td>
+              <td>36</td>
+              <td class="duration" data-value="174116736">174ms</td>
+              <td class="duration" data-value="4836576">004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.removeByPath(String,String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.request(String)</td>
+              <td>78</td>
+              <td class="duration" data-value="92337884">092ms</td>
+              <td class="duration" data-value="1183819">001ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.requestDocString(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6798372">006ms</td>
+              <td class="duration" data-value="6798372">006ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.setByPath(String,String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="921369">000ms</td>
+              <td class="duration" data-value="921369">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.setByPathTable(String,String,DataTable)</td>
+              <td>2</td>
+              <td class="duration" data-value="30395959">030ms</td>
+              <td class="duration" data-value="15197979">015ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.soapAction(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="25808302">025ms</td>
+              <td class="duration" data-value="25808302">025ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.status(int)</td>
+              <td>233</td>
+              <td class="duration" data-value="14214017">014ms</td>
+              <td class="duration" data-value="61004">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.table(String,DataTable)</td>
+              <td>7</td>
+              <td class="duration" data-value="122870403">122ms</td>
+              <td class="duration" data-value="17552914">017ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.textDocString(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="225923">000ms</td>
+              <td class="duration" data-value="225923">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">StepDefs.url(String)</td>
+              <td>192</td>
+              <td class="duration" data-value="6543997461">6s 543ms</td>
+              <td class="duration" data-value="34083320">034ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>35</td>
+            <td>1696</td>
+            <td class="duration">23s 270ms</td>
+            <td class="duration">013ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,846 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18515628,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "def cat \u003d { name: \u0027Tom\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cat",
+                  "offset": 4
+                },
+                {
+                  "val": "{ name: \u0027Tom\u0027 }",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "",
+        "description": "",
+        "id": "loop.feature---but-using-a-scenario-outline;;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4686791,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def type \u003d \u0027json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "type",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027json\u0027",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 4609042,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "def file \u003d \u0027create-\u0027 + type + \u0027.feature\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "file",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027create-\u0027 + type + \u0027.feature\u0027",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 0,
+            "name": "call [create xml] create-json.feature",
+            "match": {},
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 0,
+              "value": "{\n  \"name\": \"Tom\"\n}\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027cats\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "request { name: \u0027#(name)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ name: \u0027#(name)\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 9,
+              "value": "13:17:33.951 request:\n1 \u003e POST http://127.0.0.1:58351/cats\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 14\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n{\"name\":\"Tom\"}\n\n13:17:33.957 response time in milliseconds: 6\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":45,\"name\":\"Tom\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "def id \u003d response.id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 4
+                },
+                {
+                  "val": "response.id",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 39812823,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def res1 \u003d call read(file) cat",
+            "match": {
+              "arguments": [
+                {
+                  "val": "res1",
+                  "offset": 4
+                },
+                {
+                  "val": "call read(file) cat",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 0,
+            "name": "call [common validation routine] result.feature",
+            "match": {},
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 0,
+              "value": "{\n  \"id\": 45\n}\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "path \u0027cats\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "13:17:33.994 request:\n1 \u003e GET http://127.0.0.1:58351/cats/45\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.999 response time in milliseconds: 5\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":45,\"name\":\"Tom\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31996619,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "def res2 \u003d call read(\u0027result.feature\u0027) { id: \u0027#(res1.id)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "res2",
+                  "offset": 4
+                },
+                {
+                  "val": "call read(\u0027result.feature\u0027) { id: \u0027#(res1.id)\u0027 }",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 5412622,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def response \u003d res2.response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "response",
+                  "offset": 4
+                },
+                {
+                  "val": "res2.response",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 13069682,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "match response \u003d\u003d { id: \u0027#(~~res1.id)\u0027 , name: \u0027Tom\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#(~~res1.id)\u0027 , name: \u0027Tom\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15377621,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "def cat \u003d { name: \u0027Tom\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cat",
+                  "offset": 4
+                },
+                {
+                  "val": "{ name: \u0027Tom\u0027 }",
+                  "offset": 10
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 17,
+        "name": "",
+        "description": "",
+        "id": "loop.feature---but-using-a-scenario-outline;;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10155681,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def type \u003d \u0027xml\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "type",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027xml\u0027",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 671725,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "def file \u003d \u0027create-\u0027 + type + \u0027.feature\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "file",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027create-\u0027 + type + \u0027.feature\u0027",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 0,
+            "name": "call [create xml] create-xml.feature",
+            "match": {},
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 0,
+              "value": "{\n  \"name\": \"Tom\"\n}\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027cats\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "header Accept \u003d \u0027application/xml\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Accept",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/xml\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "request \u003ccat\u003e\u003cname\u003e#(name)\u003c/name\u003e\u003c/cat\u003e",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003ccat\u003e\u003cname\u003e#(name)\u003c/name\u003e\u003c/cat\u003e",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 10,
+              "value": "13:17:34.073 request:\n1 \u003e POST http://127.0.0.1:58351/cats\n1 \u003e Accept: application/xml\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 27\n1 \u003e Content-Type: application/xml; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\u003ccat\u003e\u003cname\u003eTom\u003c/name\u003e\u003c/cat\u003e\n\n13:17:34.076 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/xml\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e\u003ccat\u003e\u003cid\u003e47\u003c/id\u003e\u003cname\u003eTom\u003c/name\u003e\u003c/cat\u003e\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "def id \u003d /cat/id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 4
+                },
+                {
+                  "val": "/cat/id",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 30945861,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "def res1 \u003d call read(file) cat",
+            "match": {
+              "arguments": [
+                {
+                  "val": "res1",
+                  "offset": 4
+                },
+                {
+                  "val": "call read(file) cat",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 0,
+            "name": "call [common validation routine] result.feature",
+            "match": {},
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 0,
+              "value": "{\n  \"id\": \"47\"\n}\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "path \u0027cats\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "13:17:34.089 request:\n1 \u003e GET http://127.0.0.1:58351/cats/47\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.092 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":47,\"name\":\"Tom\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 12999026,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "def res2 \u003d call read(\u0027result.feature\u0027) { id: \u0027#(res1.id)\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "res2",
+                  "offset": 4
+                },
+                {
+                  "val": "call read(\u0027result.feature\u0027) { id: \u0027#(res1.id)\u0027 }",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 306087,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "def response \u003d res2.response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "response",
+                  "offset": 4
+                },
+                {
+                  "val": "res2.response",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 760642,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "match response \u003d\u003d { id: \u0027#(~~res1.id)\u0027 , name: \u0027Tom\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#(~~res1.id)\u0027 , name: \u0027Tom\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      }
+    ],
+    "name": "demo/loopcall/alt-loop.feature",
+    "description": "loop.feature - but using a scenario outline",
+    "id": "loop.feature---but-using-a-scenario-outline",
+    "keyword": "Feature",
+    "uri": "demo/loopcall/alt-loop.feature"
+  }
+]

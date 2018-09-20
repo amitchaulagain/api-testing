@@ -1,0 +1,273 @@
+13:17:32.482 this thread waited 428 milliseconds for callSingle lock: classpath:demo/headers/common-noheaders.feature
+13:17:32.527 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Nyan"}
+
+13:17:32.647 response time in milliseconds: 118
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":5,"name":"Nyan"}
+
+13:17:32.706 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Nyan"}
+
+13:17:32.710 response time in milliseconds: 4
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":13,"name":"Nyan"}
+
+13:17:32.732 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Nyan"}
+
+13:17:32.737 response time in milliseconds: 5
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":17,"name":"Nyan"}
+
+13:17:32.772 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Nyan"}
+
+13:17:32.775 response time in milliseconds: 3
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":22,"name":"Nyan"}
+
+13:17:32.827 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 14
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Bob"}
+
+13:17:32.837 response time in milliseconds: 9
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":23,"name":"Bob"}
+
+13:17:32.849 request:
+2 > POST http://127.0.0.1:58351/cats
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 15
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Wild"}
+
+13:17:32.855 response time in milliseconds: 6
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"id":25,"name":"Wild"}
+
+13:17:32.889 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 76
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":23,"name":"Bob"},{"id":25,"name":"Wild"}]}
+
+13:17:32.895 response time in milliseconds: 5
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":27,"name":"Billie","kittens":[{"id":23,"name":"Bob"},{"id":25,"name":"Wild"}]}
+
+13:17:32.914 request:
+2 > GET http://127.0.0.1:58351/cats/27/kittens
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:32.919 response time in milliseconds: 4
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+[{"id":23,"name":"Bob"},{"id":25,"name":"Wild"}]
+
+13:17:32.941 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 14
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Bob"}
+
+13:17:32.944 response time in milliseconds: 2
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":33,"name":"Bob"}
+
+13:17:32.957 request:
+2 > POST http://127.0.0.1:58351/cats
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 15
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Wild"}
+
+13:17:32.960 response time in milliseconds: 3
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"id":35,"name":"Wild"}
+
+13:17:32.967 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 76
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":33,"name":"Bob"},{"id":35,"name":"Wild"}]}
+
+13:17:32.970 response time in milliseconds: 3
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":37,"name":"Billie","kittens":[{"id":33,"name":"Bob"},{"id":35,"name":"Wild"}]}
+
+nnection: Keep-Alive
+1 > Content-Length: 76
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:57235
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":31,"name":"Bob"},{"id":33,"name":"Wild"}]}
+
+12:31:51.814 response time in milliseconds: 12
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 06:46:51 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":37,"name":"Billie","kittens":[{"id":31,"name":"Bob"},{"id":33,"name":"Wild"}]}
+
+}]}
+

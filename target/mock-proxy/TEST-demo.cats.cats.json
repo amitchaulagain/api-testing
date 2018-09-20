@@ -1,0 +1,530 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5797487,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 4,
+              "value": "15:18:30.057 skipping bootstrap configuration for env: proxy - could not find or read file: karate-config-proxy.js, prefix: CLASSPATH\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 66158,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "configure logPrettyRequest \u003d true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "logPrettyRequest",
+                  "offset": 10
+                },
+                {
+                  "val": "true",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 38645,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "configure logPrettyResponse \u003d true",
+            "match": {
+              "arguments": [
+                {
+                  "val": "logPrettyResponse",
+                  "offset": 10
+                },
+                {
+                  "val": "true",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "create and retrieve a cat",
+        "description": "",
+        "id": "cats-end-point;create-and-retrieve-a-cat",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 40436,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 10,
+                "value": "# create a new cat"
+              }
+            ],
+            "line": 11,
+            "name": "path \u0027cats\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 29490,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "request { name: \u0027Billie\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ name: \u0027Billie\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5911362,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 13,
+              "value": "15:18:30.059 request:\n1 \u003e POST http://127.0.0.1:51743/cats\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Content-Length: 17\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:51743\n1 \u003e Proxy-Connection: Keep-Alive\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n{\n  \"name\": \"Billie\"\n}\n\n\n15:18:30.064 response time in milliseconds: 5\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Mon, 10 Sep 2018 09:33:29 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\n  \"id\": 160,\n  \"name\": \"Billie\"\n}\n\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 23884,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 58189,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "match response \u003d\u003d { id: \u0027#number\u0027, name: \u0027Billie\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#number\u0027, name: \u0027Billie\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 170573,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "def id \u003d response.id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 4
+                },
+                {
+                  "val": "response.id",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 68390,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 19,
+                "value": "# get by id"
+              }
+            ],
+            "line": 20,
+            "name": "path \u0027cats\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5200676,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 21,
+              "value": "15:18:30.065 request:\n2 \u003e GET http://127.0.0.1:51743/cats/160\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Host: 127.0.0.1:51743\n2 \u003e Proxy-Connection: Keep-Alive\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n15:18:30.070 response time in milliseconds: 5\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Type: application/json;charset\u003dUTF-8\n2 \u003c Date: Mon, 10 Sep 2018 09:33:29 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c Transfer-Encoding: chunked\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\n  \"id\": 160,\n  \"name\": \"Billie\"\n}\n\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 12348,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 260215,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "match response \u003d\u003d { id: \u0027#(id)\u0027, name: \u0027Billie\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#(id)\u0027, name: \u0027Billie\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51843,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 25,
+                "value": "# get all cats"
+              }
+            ],
+            "line": 26,
+            "name": "path \u0027cats\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6339026,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 27,
+              "value": "15:18:30.071 request:\n3 \u003e GET http://127.0.0.1:51743/cats\n3 \u003e Accept-Encoding: gzip,deflate\n3 \u003e Host: 127.0.0.1:51743\n3 \u003e Proxy-Connection: Keep-Alive\n3 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n15:18:30.077 response time in milliseconds: 5\n3 \u003c 200\n3 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n3 \u003c Content-Type: application/json;charset\u003dUTF-8\n3 \u003c Date: Mon, 10 Sep 2018 09:33:29 GMT\n3 \u003c Expires: 0\n3 \u003c Pragma: no-cache\n3 \u003c Transfer-Encoding: chunked\n3 \u003c X-Content-Type-Options: nosniff\n3 \u003c X-Frame-Options: DENY\n3 \u003c X-XSS-Protection: 1; mode\u003dblock\n[\n  {\n    \"id\": 128,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 1,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 129,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 130,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 127,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 128,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 129,\n        \"name\": \"Nyan\"\n      }\n    ]\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 131,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 4,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 132,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 5,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 133,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 6,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 134,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 7,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 1,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 3,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 4,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 5,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 6,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 135,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 8,\n    \"name\": \"Kit0\"\n  },\n  {\n    \"id\": 136,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 9,\n    \"name\": \"Kit1\"\n  },\n  {\n    \"id\": 137,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 131,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 132,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 133,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 134,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 135,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 136,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 10,\n    \"name\": \"Kit2\"\n  },\n  {\n    \"id\": 138,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 11,\n    \"name\": \"Kit3\"\n  },\n  {\n    \"id\": 139,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 12,\n    \"name\": \"Kit4\"\n  },\n  {\n    \"id\": 140,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 13,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 141,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 14,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 142,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 15,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 143,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 141,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 142,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 16,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 17,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 18,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 146,\n    \"name\": \"Sillie\"\n  },\n  {\n    \"id\": 19,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 17,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 18,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 147,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 20,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 148,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 21,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 149,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 22,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 20,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 21,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 150,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 23,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 151,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 24,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 152,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 25,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 153,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 26,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 154,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 27,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 155,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 28,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 25,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 26,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 27,\n        \"name\": \"Nyan\"\n      }\n    ]\n  },\n  {\n    \"id\": 156,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 29,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 157,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 155,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 156,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 30,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 158,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 31,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 159,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 32,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 160,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 33,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 34,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 35,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 29,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 30,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 31,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 32,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 33,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 34,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 36,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 37,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 38,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 39,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 40,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 41,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 39,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 40,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 44,\n    \"name\": \"Sillie\"\n  },\n  {\n    \"id\": 45,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 46,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 47,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 48,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 49,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 50,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 51,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 52,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 53,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 54,\n    \"name\": \"Kit0\"\n  },\n  {\n    \"id\": 55,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 56,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 57,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 58,\n    \"name\": \"Kit1\"\n  },\n  {\n    \"id\": 59,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 60,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 61,\n    \"name\": \"Kit2\"\n  },\n  {\n    \"id\": 62,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 63,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 64,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 65,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 66,\n    \"name\": \"Kit3\"\n  },\n  {\n    \"id\": 67,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 68,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 69,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 70,\n    \"name\": \"Kit4\"\n  },\n  {\n    \"id\": 71,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 72,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 73,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 53,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 55,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 59,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 64,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 68,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 72,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 74,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 75,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 76,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 56,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 60,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 65,\n        \"name\": \"Nyan\"\n      }\n    ]\n  },\n  {\n    \"id\": 77,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 78,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 79,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 74,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 77,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 80,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 81,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 82,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 63,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 67,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 71,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 75,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 78,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 81,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 83,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 84,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 85,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 86,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 87,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 88,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 89,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 84,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 86,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 91,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 87,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 88,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 93,\n    \"name\": \"Sillie\"\n  },\n  {\n    \"id\": 94,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 95,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 96,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 97,\n    \"name\": \"Tom\"\n  },\n  {\n    \"id\": 98,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 99,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 100,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 101,\n    \"name\": \"Billie Edit\"\n  },\n  {\n    \"id\": 102,\n    \"name\": \"Billie\"\n  },\n  {\n    \"id\": 103,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 104,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 100,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 103,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 105,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 106,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 107,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 108,\n    \"name\": \"Keyboard\"\n  },\n  {\n    \"id\": 109,\n    \"name\": \"LOL\"\n  },\n  {\n    \"id\": 110,\n    \"name\": \"Ceiling\"\n  },\n  {\n    \"id\": 111,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 105,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 106,\n        \"name\": \"Wild\"\n      },\n      {\n        \"id\": 107,\n        \"name\": \"Nyan\"\n      },\n      {\n        \"id\": 108,\n        \"name\": \"Keyboard\"\n      },\n      {\n        \"id\": 109,\n        \"name\": \"LOL\"\n      },\n      {\n        \"id\": 110,\n        \"name\": \"Ceiling\"\n      }\n    ]\n  },\n  {\n    \"id\": 112,\n    \"name\": \"Kit0\"\n  },\n  {\n    \"id\": 113,\n    \"name\": \"Kit1\"\n  },\n  {\n    \"id\": 114,\n    \"name\": \"Kit2\"\n  },\n  {\n    \"id\": 115,\n    \"name\": \"Kit3\"\n  },\n  {\n    \"id\": 116,\n    \"name\": \"Kit4\"\n  },\n  {\n    \"id\": 117,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 118,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 119,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 120,\n    \"name\": \"Nyan\"\n  },\n  {\n    \"id\": 121,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 122,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 123,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 121,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 122,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 124,\n    \"name\": \"Bob\"\n  },\n  {\n    \"id\": 125,\n    \"name\": \"Wild\"\n  },\n  {\n    \"id\": 126,\n    \"name\": \"Billie\",\n    \"kittens\": [\n      {\n        \"id\": 124,\n        \"name\": \"Bob\"\n      },\n      {\n        \"id\": 125,\n        \"name\": \"Wild\"\n      }\n    ]\n  },\n  {\n    \"id\": 127,\n    \"name\": \"Bob\"\n  }\n]\n\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 13587,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 534163,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "match response contains { id: \u0027#(id)\u0027, name: \u0027Billie\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " { id: \u0027#(id)\u0027, name: \u0027Billie\u0027 }",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64753,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 31,
+                "value": "# get cat but ask for xml"
+              }
+            ],
+            "line": 32,
+            "name": "path \u0027cats\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027cats\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 52922,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "header Accept \u003d \u0027application/xml\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Accept",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/xml\u0027",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7978438,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 34,
+              "value": "15:18:30.079 request:\n4 \u003e GET http://127.0.0.1:51743/cats/160\n4 \u003e Accept: application/xml\n4 \u003e Accept-Encoding: gzip,deflate\n4 \u003e Host: 127.0.0.1:51743\n4 \u003e Proxy-Connection: Keep-Alive\n4 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n15:18:30.086 response time in milliseconds: 5\n4 \u003c 200\n4 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n4 \u003c Content-Type: application/xml\n4 \u003c Date: Mon, 10 Sep 2018 09:33:29 GMT\n4 \u003c Expires: 0\n4 \u003c Pragma: no-cache\n4 \u003c Transfer-Encoding: chunked\n4 \u003c X-Content-Type-Options: nosniff\n4 \u003c X-Frame-Options: DENY\n4 \u003c X-XSS-Protection: 1; mode\u003dblock\n\u003ccat\u003e\n   \u003cid\u003e160\u003c/id\u003e\n   \u003cname\u003eBillie\u003c/name\u003e\n\u003c/cat\u003e\n\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 15029,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1021044,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "match response \u003d\u003d \u003ccat\u003e\u003cid\u003e#(id)\u003c/id\u003e\u003cname\u003eBillie\u003c/name\u003e\u003c/cat\u003e",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u003ccat\u003e\u003cid\u003e#(id)\u003c/id\u003e\u003cname\u003eBillie\u003c/name\u003e\u003c/cat\u003e",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "demo/cats/cats.feature",
+    "description": "cats end-point",
+    "id": "cats-end-point",
+    "keyword": "Feature",
+    "uri": "demo/cats/cats.feature"
+  }
+]

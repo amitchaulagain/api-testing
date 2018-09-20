@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="loop.feature - but using a scenario outline"
+           skipped="0"
+           tests="2"
+           time="0.18932">
+   <testcase classname="demo.loopcall.alt-loop" name="1 (1)" time="0.118103">
+      <system-out>* def cat = { name: 'Tom' }.................................................passed
+* def type = 'json'.........................................................passed
+* def file = 'create-' + type + '.feature'..................................passed
+* call [create xml] create-json.feature.....................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def id = response.id......................................................passed
+* def res1 = call read(file) cat............................................passed
+* call [common validation routine] result.feature...........................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats', id.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* def res2 = call read('result.feature') { id: '#(res1.id)' }...............passed
+* def response = res2.response..............................................passed
+* match response == { id: '#(~~res1.id)' , name: 'Tom' }....................passed
+</system-out>
+   </testcase>
+   <testcase classname="demo.loopcall.alt-loop" name="2 (2)" time="0.071217">
+      <system-out>* def cat = { name: 'Tom' }.................................................passed
+* def type = 'xml'..........................................................passed
+* def file = 'create-' + type + '.feature'..................................passed
+* call [create xml] create-xml.feature......................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And header Accept = 'application/xml'.......................................passed
+And request &lt;cat&gt;&lt;name&gt;#(name)&lt;/name&gt;&lt;/cat&gt;.................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def id = /cat/id..........................................................passed
+* def res1 = call read(file) cat............................................passed
+* call [common validation routine] result.feature...........................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats', id.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* def res2 = call read('result.feature') { id: '#(res1.id)' }...............passed
+* def response = res2.response..............................................passed
+* match response == { id: '#(~~res1.id)' , name: 'Tom' }....................passed
+</system-out>
+   </testcase>
+</testsuite>

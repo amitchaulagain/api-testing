@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="Test transactions's feature"
+           skipped="0"
+           tests="2"
+           time="3.028739">
+   <testcase classname="demo.transactions.transactions"
+             name="Create  transaction"
+             time="2.399971">
+      <system-out>* url 'http://45.55.45.137:9999/graphql'....................................passed
+Given def query = read('transaction-create.graphql')........................passed
+And def input_transaction = read('transaction-create.json').................passed
+And print input_transaction.................................................passed
+And request { query: '#(query)',variables:'#(input_transaction)' }..........passed
+And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'.passed
+And header Accept = 'application/json'......................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def created_id = response.data.addTransaction.id..........................passed
+And def query = read('transaction-get-by-id.graphql').......................passed
+And def variables = { _id: '#(created_id)' }................................passed
+* print variables...........................................................passed
+And request { query: '#(query)',variables:'#(variables)' }..................passed
+And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'.passed
+And header Accept = 'application/json'......................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+And assert response.data.transaction._id==variables._id.....................passed
+And def query = read('transaction-delete.graphql')..........................passed
+And def variables = { _id: '#(created_id)' }................................passed
+* print variables...........................................................passed
+And request { query: '#(query)',variables:'#(variables)' }..................passed
+And header Authorization = 'Bearer OWYwODcxOTEtNjQ0Yy00YjdkLTlhOWItYTNmOTI5ZGExMGUz'.passed
+And header Accept = 'application/json'......................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+And assert response.data.deleteTransaction.id==variables._id................passed
+</system-out>
+   </testcase>
+   <testcase classname="demo.transactions.transactions"
+             name="Get All Transaction"
+             time="0.628768">
+      <system-out>* url 'http://45.55.45.137:9999/graphql'....................................passed
+Given def query = read('transaction.graphql')...............................passed
+And request { query: '#(query)' }...........................................passed
+And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'.passed
+And header Accept = 'application/json'......................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+</system-out>
+   </testcase>
+</testsuite>

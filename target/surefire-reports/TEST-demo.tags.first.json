@@ -1,0 +1,90 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 6,
+        "name": "f1 - s1",
+        "description": "",
+        "id": "tags-demo---first;f1---s1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 64462159,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "print \u0027first feature:@smoke, first scenario\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027first feature:@smoke, first scenario\u0027",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "13:17:34.477 [print] first feature:@smoke, first scenario\n"
+            }
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "f1 - s2",
+        "description": "",
+        "id": "tags-demo---first;f1---s2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16039273,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "print \u0027first feature:@smoke, second scenario:@fire\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027first feature:@smoke, second scenario:@fire\u0027",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 11,
+              "value": "13:17:34.494 [print] first feature:@smoke, second scenario:@fire\n"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@fire"
+          }
+        ]
+      }
+    ],
+    "name": "demo/tags/first.feature",
+    "description": "tags demo - first\nrun the following example from the command line:\n  mvn test -Dcucumber.options\u003d\"--tags @smoke\" -Dtest\u003dTagsRunner",
+    "id": "tags-demo---first",
+    "keyword": "Feature",
+    "uri": "demo/tags/first.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@smoke"
+      }
+    ]
+  }
+]

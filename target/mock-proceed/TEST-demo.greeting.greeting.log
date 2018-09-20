@@ -1,0 +1,42 @@
+15:18:29.868 skipping bootstrap configuration for env: mock - could not find or read file: karate-config-mock.js, prefix: CLASSPATH
+15:18:29.869 request:
+1 > GET http://127.0.0.1:52561/greeting
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:52561
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+15:18:29.877 response time in milliseconds: 8
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 10 Sep 2018 09:33:29 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":27,"content":"Hello World!"}
+
+15:18:29.880 skipping bootstrap configuration for env: mock - could not find or read file: karate-config-mock.js, prefix: CLASSPATH
+15:18:29.881 request:
+1 > GET http://127.0.0.1:52561/greeting?name=Billie
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:52561
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+15:18:29.886 response time in milliseconds: 5
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 10 Sep 2018 09:33:29 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":28,"content":"Hello Billie!"}
+

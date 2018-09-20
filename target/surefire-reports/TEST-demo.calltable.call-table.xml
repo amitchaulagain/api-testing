@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="calling another feature file in a loop"
+           skipped="0"
+           tests="1"
+           time="0.241956">
+   <testcase classname="demo.calltable.call-table"
+             name="create parent cat using kittens"
+             time="0.241956">
+      <system-out>* url demoBaseUrl...........................................................passed
+* table kittens.............................................................passed
+* call[0] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* call[1] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* call[2] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* call[3] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* call[4] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* call[5] [re-usable feature to create a single cat] kitten-create.feature..passed
+* match __arg == kittens[__loop]............................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def result = call read('kitten-create.feature') kittens...................passed
+* def created = $result[*].response.........................................passed
+* match result[*].__loop == [0, 1, 2, 3, 4, 5]..............................passed
+* match created[*].name == $kittens[*].name.................................passed
+Given path 'cats'...........................................................passed
+And request { name: 'Billie', kittens: '#(created)' }.......................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+And match response == { id: '#number', name: 'Billie', kittens: '#(^^created)' }.passed
+Given path 'cats', $.id, 'kittens'..........................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* match each response == { id: '#number', name: '#string' }.................passed
+* match response == "#[6] { id: '#number', name: '#string' }"...............passed
+* match response[*].name contains only $kittens[*].name.....................passed
+* assert response.length == 6...............................................passed
+* match response == '#[6]'..................................................passed
+</system-out>
+   </testcase>
+</testsuite>

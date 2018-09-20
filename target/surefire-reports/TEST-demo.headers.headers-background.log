@@ -1,0 +1,118 @@
+13:17:33.777 request:
+1 > GET http://127.0.0.1:58351/headers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:33.779 response time in milliseconds: 2
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Length: 36
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: time=1537428753778
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+cf3ffe13-4fb6-4cb5-9fb0-65861b5c4fef
+
+13:17:33.787 request:
+2 > GET http://127.0.0.1:58351/headers/cf3ffe13-4fb6-4cb5-9fb0-65861b5c4fef?url=http%3A%2F%2F127.0.0.1%3A58351
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: cf3ffe13-4fb6-4cb5-9fb0-65861b5c4fef1537428753778http://127.0.0.1:58351
+2 > Connection: Keep-Alive
+2 > Cookie: time=1537428753778
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:33.789 response time in milliseconds: 2
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Length: 0
+2 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+
+13:17:33.797 request:
+1 > GET http://127.0.0.1:58351/headers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:33.800 response time in milliseconds: 2
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Length: 36
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: time=1537428753799
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+e04cdd1e-d200-4cfa-9f1c-fc6baad336fa
+
+13:17:33.803 request:
+2 > GET http://127.0.0.1:58351/headers/e04cdd1e-d200-4cfa-9f1c-fc6baad336fa?url=http%3A%2F%2F127.0.0.1%3A58351
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: e04cdd1e-d200-4cfa-9f1c-fc6baad336fa1537428753799http://127.0.0.1:58351
+2 > Connection: Keep-Alive
+2 > Cookie: time=1537428753799
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:33.806 response time in milliseconds: 3
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Length: 0
+2 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+
+tp request failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:49.875 feature call failed: classpath:demo/headers/common-noheaders.feature
+arg: [object Object]
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:49.875 javascript function call failed: 
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:49.875 failed function body: function() {
+  karate.configure('connectTimeout', 5000);
+  karate.configure('readTimeout', 5000);  
+  var port = karate.properties['demo.server.port'];  
+  if (!port) {
+    port = karate.env == 'web' ? 8090 : 8080;
+  }
+  var protocol = 'http';
+  if (karate.properties['demo.server.https'] == 'true') {
+    protocol = 'https';
+    karate.configure('ssl', true);
+  }  
+  var config = { demoBaseUrl: protocol + '://127.0.0.1:' + port };
+  if (karate.env == 'proxy') {
+    var proxyPort = karate.properties['demo.proxy.port']
+    karate.configure('proxy', 'http://127.0.0.1:' + proxyPort);
+  }
+  if (karate.env != 'mock' && karate.env != 'proxy' && karate.env != 'contract') {
+    // 'callSingle' is guaranteed to run only once even across all threads
+    var result = karate.callSingle('classpath:demo/headers/common-noheaders.feature', config);
+    // and it sets a variable called 'authInfo' used in headers-single.feature
+    config.authInfo = { authTime: result.time, authToken: result.token };
+  }
+  return config;
+}

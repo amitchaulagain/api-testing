@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="json schema validation"
+           skipped="0"
+           tests="1"
+           time="0.035825">
+   <testcase classname="demo.schema.schema"
+             name="using karate's simpler alternative to json-schema"
+             time="0.035825">
+      <system-out>* def warehouseLocation = { latitude: '#number', longitude: '#number' }.....passed
+* def productStructure =....................................................passed
+* def json = read('products.json')..........................................passed
+* match json == '#[] productStructure'......................................passed
+</system-out>
+   </testcase>
+</testsuite>

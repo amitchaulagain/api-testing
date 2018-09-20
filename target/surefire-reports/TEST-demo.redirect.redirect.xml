@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="disable redirects in order to assert against the location header"
+           skipped="0"
+           tests="4"
+           time="0.151592">
+   <testcase classname="demo.redirect.redirect"
+             name="get redirects are followed by default"
+             time="0.03291">
+      <system-out>* url demoBaseUrl...........................................................passed
+Given path 'redirect'.......................................................passed
+And param foo = 'bar'.......................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+And match response == { foo: ['bar'] }......................................passed
+</system-out>
+   </testcase>
+   <testcase classname="demo.redirect.redirect"
+             name="get redirects can be disabled"
+             time="0.045459">
+      <system-out>* url demoBaseUrl...........................................................passed
+* configure followRedirects = false.........................................passed
+Given path 'redirect'.......................................................passed
+When method get.............................................................passed
+Then status 302.............................................................passed
+And match header Location == demoBaseUrl + '/search'........................passed
+* def location = responseHeaders['Location'][0].............................passed
+Given url location..........................................................passed
+And param foo = 'bar'.......................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+And match response == { foo: ['bar'] }......................................passed
+</system-out>
+   </testcase>
+   <testcase classname="demo.redirect.redirect"
+             name="post redirects are followed by default"
+             time="0.041877">
+      <system-out>* url demoBaseUrl...........................................................passed
+Given path 'redirect'.......................................................passed
+And param foo = 'bar'.......................................................passed
+And request {}..............................................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+And match response == { foo: ['bar'] }......................................passed
+</system-out>
+   </testcase>
+   <testcase classname="demo.redirect.redirect"
+             name="post redirects can be disabled"
+             time="0.031346">
+      <system-out>* url demoBaseUrl...........................................................passed
+* configure followRedirects = false.........................................passed
+Given path 'redirect'.......................................................passed
+And request {}..............................................................passed
+When method post............................................................passed
+Then status 302.............................................................passed
+And match header Location == demoBaseUrl + '/search'........................passed
+* def location = responseHeaders['Location'][0].............................passed
+Given url location..........................................................passed
+And param foo = 'bar'.......................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+And match response == { foo: ['bar'] }......................................passed
+</system-out>
+   </testcase>
+</testsuite>

@@ -1,0 +1,1584 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "special characters in the url",
+        "description": "",
+        "id": "encoding-tests;special-characters-in-the-url",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17434682,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl + \u0027/encoding/�Ill~Formed@RequiredString!\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl + \u0027/encoding/�Ill~Formed@RequiredString!\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 32581859,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 5,
+              "value": "13:17:33.177 request:\n1 \u003e GET http://127.0.0.1:58351/encoding/�Ill~Formed@RequiredString!\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.185 response time in milliseconds: 6\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 29\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n�Ill~Formed@RequiredString!\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 61115,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2281470,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "match response \u003d\u003d \u0027�Ill~Formed@RequiredString!\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027�Ill~Formed@RequiredString!\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "special characters in the path",
+        "description": "",
+        "id": "encoding-tests;special-characters-in-the-path",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9525015,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6790242,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "path \u0027encoding\u0027, \u0027�Ill~Formed@RequiredString!\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027encoding\u0027, \u0027�Ill~Formed@RequiredString!\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13998233,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 12,
+              "value": "13:17:33.210 request:\n1 \u003e GET http://127.0.0.1:58351/encoding/%EF%BF%BDIll~Formed@RequiredString!\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.219 response time in milliseconds: 8\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 29\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n�Ill~Formed@RequiredString!\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 128024,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7049651,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "match response \u003d\u003d \u0027�Ill~Formed@RequiredString!\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027�Ill~Formed@RequiredString!\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "question mark in the url",
+        "description": "",
+        "id": "encoding-tests;question-mark-in-the-url",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22650777,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "url demoBaseUrl + \u0027/encoding/index.php%3F/api/v2\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl + \u0027/encoding/index.php%3F/api/v2\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5514486,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "path \u0027hello\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027hello\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12825887,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 19,
+              "value": "13:17:33.261 request:\n1 \u003e GET http://127.0.0.1:58351/encoding/index.php%3F/api/v2/hello\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.271 response time in milliseconds: 10\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 5\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\nhello\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 105336,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 472468,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "match response \u003d\u003d \u0027hello\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027hello\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 23,
+        "name": "manually decode before passing to karate",
+        "description": "",
+        "id": "encoding-tests;manually-decode-before-passing-to-karate",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9883166,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "def encoded \u003d \u0027encoding%2Ffoo%2Bbar\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "encoded",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027encoding%2Ffoo%2Bbar\u0027",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 15741405,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "def decoded \u003d java.net.URLDecoder.decode(encoded, \u0027UTF-8\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "decoded",
+                  "offset": 4
+                },
+                {
+                  "val": "java.net.URLDecoder.decode(encoded, \u0027UTF-8\u0027)",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 115267,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 122398,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "path decoded",
+            "match": {
+              "arguments": [
+                {
+                  "val": "decoded",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13339676,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 28,
+              "value": "13:17:33.307 request:\n1 \u003e GET http://127.0.0.1:58351/encoding/foo+bar\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.317 response time in milliseconds: 9\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 7\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\nfoo+bar\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 117804,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4648855,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "match response \u003d\u003d \u0027foo+bar\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027foo+bar\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 32,
+        "name": "german xml",
+        "description": "",
+        "id": "encoding-tests;german-xml",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13666410,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 425051,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "path \u0027echo\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027echo\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1210795,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "request \u003cname\u003eMüller\u003c/name\u003e",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u003cname\u003eMüller\u003c/name\u003e",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2660321,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "header Content-Type \u003d \u0027application/xml; charset\u003dutf-8\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/xml; charset\u003dutf-8\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6481624,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 37,
+              "value": "13:17:33.346 request:\n1 \u003e POST http://127.0.0.1:58351/echo\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 20\n1 \u003e Content-Type: application/xml; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\u003cname\u003eMüller\u003c/name\u003e\n\n13:17:33.349 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 20\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\u003cname\u003eMüller\u003c/name\u003e\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 58476,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1779579,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "match response \u003d\u003d \u003cname\u003eMüller\u003c/name\u003e",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u003cname\u003eMüller\u003c/name\u003e",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 41,
+        "name": "french json",
+        "description": "",
+        "id": "encoding-tests;french-json",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7605106,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 155841,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "path \u0027echo\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027echo\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93341,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "request { givenName: \u0027oliàèôç\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ givenName: \u0027oliàèôç\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2086926,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "header Content-Type \u003d \u0027application/json; charset\u003dutf-8\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/json; charset\u003dutf-8\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3723189,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 46,
+              "value": "13:17:33.365 request:\n1 \u003e POST http://127.0.0.1:58351/echo\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 27\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n{\"givenName\":\"oliàèôç\"}\n\n13:17:33.368 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 27\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:32 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"givenName\":\"oliàèôç\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 46416,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 185852,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "match response \u003d\u003d { givenName: \u0027oliàèôç\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ givenName: \u0027oliàèôç\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 51,
+        "name": "french json ISO-8859-1",
+        "description": "",
+        "id": "encoding-tests;french-json-iso-8859-1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8636843,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2876577,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "path \u0027echo\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027echo\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94146,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "request { givenName: \u0027oliàèôç\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{ givenName: \u0027oliàèôç\u0027 }",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 271218456,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "header Content-Type \u003d \u0027application/json; charset\u003dISO-8859-1\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/json; charset\u003dISO-8859-1\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5274286,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 56,
+              "value": "13:17:33.654 request:\n1 \u003e POST http://127.0.0.1:58351/echo\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 23\n1 \u003e Content-Type: application/json; charset\u003dISO-8859-1\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n{\"givenName\":\"oli����\"}\n\n13:17:33.658 response time in milliseconds: 3\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 27\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"givenName\":\"oliàèôç\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 49068,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 214194,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "match response \u003d\u003d { givenName: \u0027oliàèôç\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ givenName: \u0027oliàèôç\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18567367,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "def contentType \u003d karate.prevRequest.headers[\u0027Content-Type\u0027][0]",
+            "match": {
+              "arguments": [
+                {
+                  "val": "contentType",
+                  "offset": 4
+                },
+                {
+                  "val": "karate.prevRequest.headers[\u0027Content-Type\u0027][0]",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 248649,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "match contentType contains \u0027application/json\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "contentType",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " \u0027application/json\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 2778684,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "match contentType contains \u0027charset\u003dISO-8859-1\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "contentType",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " \u0027charset\u003dISO-8859-1\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "* "
+          }
+        ],
+        "tags": [
+          {
+            "line": 50,
+            "name": "@mock-servlet-todo"
+          }
+        ]
+      },
+      {
+        "line": 63,
+        "name": "french \u0026 german form field",
+        "description": "",
+        "id": "encoding-tests;french-\u0026-german-form-field",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3837793,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1754191,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "path \u0027echo\u0027, \u0027message\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027echo\u0027, \u0027message\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3430928,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "form field text \u003d \u0027oliàèôç Müller\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "text",
+                  "offset": 11
+                },
+                {
+                  "val": "\u0027oliàèôç Müller\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.formField(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1694915,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "header Content-Type \u003d \u0027application/x-www-form-urlencoded; charset\u003dutf-8\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/x-www-form-urlencoded; charset\u003dutf-8\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9732739,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 68,
+              "value": "13:17:33.696 request:\n1 \u003e POST http://127.0.0.1:58351/echo/message\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 44\n1 \u003e Content-Type: application/x-www-form-urlencoded; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\ntext\u003doli%C3%A0%C3%A8%C3%B4%C3%A7+M%C3%BCller\n\n13:17:33.703 response time in milliseconds: 7\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 19\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\noliàèôç Müller\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 42775,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 174974,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "match response \u003d\u003d \u0027oliàèôç Müller\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "\u0027oliàèôç Müller\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 72,
+        "name": "french \u0026 german multipart",
+        "description": "",
+        "id": "encoding-tests;french-\u0026-german-multipart",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2851584,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2237250,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "path \u0027files\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1385705,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "multipart file myFile \u003d { read: \u0027../upload/karate-logo.jpg\u0027, filename: \u0027karate-logo.jpg\u0027, contentType: \u0027image/jpg\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFile",
+                  "offset": 15
+                },
+                {
+                  "val": "{ read: \u0027../upload/karate-logo.jpg\u0027, filename: \u0027karate-logo.jpg\u0027, contentType: \u0027image/jpg\u0027 }",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefs.multiPartFile(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 307763,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "multipart field message \u003d \u0027oliàèôç Müller\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 16
+                },
+                {
+                  "val": "\u0027oliàèôç Müller\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2623331,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "header Content-Type \u003d \u0027multipart/form-data; charset\u003dutf-8\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027multipart/form-data; charset\u003dutf-8\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 47000684,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 78,
+              "value": "13:17:33.729 request:\n1 \u003e POST http://127.0.0.1:58351/files\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Type: multipart/form-data; charset\u003dUTF-8; boundary\u003dd2Bj05F7iBXw1C3pLITKD4GTxckezIEs\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e Transfer-Encoding: chunked\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.763 response time in milliseconds: 33\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":\"7c85af94-0a68-4a21-8d39-aa2e7718187d\",\"filename\":\"karate-logo.jpg\",\"message\":\"oliàèôç Müller\",\"contentType\":\"image/jpg\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 32838,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 260472,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "match response \u003d\u003d { id: \u0027#uuid\u0027, filename: \u0027karate-logo.jpg\u0027, message: \u0027oliàèôç Müller\u0027, contentType: \u0027image/jpg\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#uuid\u0027, filename: \u0027karate-logo.jpg\u0027, message: \u0027oliàèôç Müller\u0027, contentType: \u0027image/jpg\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 83,
+        "name": "multipart but forcing the charset to NOT be sent",
+        "description": "",
+        "id": "encoding-tests;multipart-but-forcing-the-charset-to-not-be-sent",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3214290,
+              "status": "passed"
+            },
+            "line": 84,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 90930,
+              "status": "passed"
+            },
+            "line": 85,
+            "name": "path \u0027files\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120402,
+              "status": "passed"
+            },
+            "line": 86,
+            "name": "multipart file myFile \u003d { read: \u0027../upload/karate-logo.jpg\u0027, filename: \u0027karate-logo.jpg\u0027, contentType: \u0027image/jpg\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFile",
+                  "offset": 15
+                },
+                {
+                  "val": "{ read: \u0027../upload/karate-logo.jpg\u0027, filename: \u0027karate-logo.jpg\u0027, contentType: \u0027image/jpg\u0027 }",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefs.multiPartFile(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 132703,
+              "status": "passed"
+            },
+            "line": 87,
+            "name": "multipart field message \u003d \u0027oliàèôç Müller\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 16
+                },
+                {
+                  "val": "\u0027oliàèôç Müller\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 346829,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 88,
+                "value": "# this ensures that \"charset\" does NOT appear in the Content-Type header"
+              },
+              {
+                "line": 89,
+                "value": "# which is often required as some servers don\u0027t like it"
+              }
+            ],
+            "line": 90,
+            "name": "configure charset \u003d null",
+            "match": {
+              "arguments": [
+                {
+                  "val": "charset",
+                  "offset": 10
+                },
+                {
+                  "val": "null",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6822127,
+              "status": "passed"
+            },
+            "line": 91,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 91,
+              "value": "13:17:33.770 request:\n1 \u003e POST http://127.0.0.1:58351/files\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Type: multipart/form-data; boundary\u003dmluFbCmtvWgGjpvoSdUBpDpIqlbYf015HP2Q2s\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e Transfer-Encoding: chunked\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:33.775 response time in milliseconds: 5\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":\"77e4c47e-9889-4db3-9981-baac3639329a\",\"filename\":\"karate-logo.jpg\",\"message\":\"oli???? M?ller\",\"contentType\":\"image/jpg\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 35702,
+              "status": "passed"
+            },
+            "line": 92,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 181527,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "match response \u003d\u003d { id: \u0027#uuid\u0027, filename: \u0027karate-logo.jpg\u0027, message: \u0027oli???? M?ller\u0027, contentType: \u0027image/jpg\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#uuid\u0027, filename: \u0027karate-logo.jpg\u0027, message: \u0027oli???? M?ller\u0027, contentType: \u0027image/jpg\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 82,
+            "name": "@apache"
+          },
+          {
+            "line": 82,
+            "name": "@mock-servlet-todo"
+          }
+        ]
+      }
+    ],
+    "name": "demo/encoding/encoding.feature",
+    "description": "encoding tests",
+    "id": "encoding-tests",
+    "keyword": "Feature",
+    "uri": "demo/encoding/encoding.feature"
+  }
+]

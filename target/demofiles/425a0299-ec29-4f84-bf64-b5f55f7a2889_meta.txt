@@ -1,0 +1,1 @@
+{"id":"425a0299-ec29-4f84-bf64-b5f55f7a2889","filename":"karate-logo.jpg","message":"hello world","contentType":"application/octet-stream"}

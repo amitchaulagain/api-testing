@@ -1,0 +1,139 @@
+13:17:33.248 request:
+1 > POST http://45.55.45.137:9999/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer ODg2NWNjMDktOWE3YS00MWZlLWE4ZDItMmFhY2FkMTJmZDQ3
+1 > Connection: Keep-Alive
+1 > Content-Length: 211
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 45.55.45.137:9999
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"query":"    query test {\n        transactions{\n            data {\n                _id\n                name\n            }\n            limit\n            offset\n            total_count\n        }\n    }"}
+
+13:17:33.966 response time in milliseconds: 717
+1 < 200
+1 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+1 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+1 < Access-Control-Max-Age: 3628800
+1 < Allow: *
+1 < Content-Length: 1316
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+{"data":{"transactions":{"data":[{"_id":"5afd68460e0000000a53da18","name":"Acre Heights Crescent-122, Apartment"},{"_id":"5afd68d70e0000310a53da30","name":"Adair Road,Computer house"},{"_id":"5afd69d90e0000f50a53da65","name":"Admiral Road , business complex "},{"_id":"5afd6af20e0000560b53dac2","name":"Adler Street , building"},{"_id":"5afd6ba70e0000950b53dafd","name":"305, Rue Félix-Leclerc, farmhouse"},{"_id":"5afd6cb20e0000ed0b53db43","name":"116, Rue Jetté, revolving restaurant"},{"_id":"5afd71e40d00002e017266ba","name":"310, Rg York, apartment"},{"_id":"5afd75c00d0000040372677d","name":"310, Rg York, workshop"},{"_id":"5afd91720d0000c50e726ae0","name":"31 street, land"},{"_id":"5afd927a0d00006a0f726aed","name":"Abbeville Road, Building"},{"_id":"5afd92bf0d00008a0f726aef","name":"South Road, farmhouse"},{"_id":"5afd93bc0d0000a50f726af7","name":"4 Winds Drive, land"},{"_id":"5afd942a0d0000cc0f726afe","name":"Addington Avenue, business complex"},{"_id":"5afd94a00d0000e50f726b08","name":"Aintree Court, building"},{"_id":"5b0408630d00006752728c99","name":"Aintree Court, building"},{"_id":"5ba0eef40d00006e067c2d8c","name":"Car Mechanics"},{"_id":"5ba1f9730d0000243c7c3000","name":"Car Mechanics"},{"_id":"5ba1fbb60d0000db3c7c300e","name":"Car Mechanics"}],"limit":200,"offset":0,"total_count":18}}}
+
+13:17:33.976 [print] response: {
+  "data": {
+    "transactions": {
+      "data": [
+        {
+          "_id": "5afd68460e0000000a53da18",
+          "name": "Acre Heights Crescent-122, Apartment"
+        },
+        {
+          "_id": "5afd68d70e0000310a53da30",
+          "name": "Adair Road,Computer house"
+        },
+        {
+          "_id": "5afd69d90e0000f50a53da65",
+          "name": "Admiral Road , business complex "
+        },
+        {
+          "_id": "5afd6af20e0000560b53dac2",
+          "name": "Adler Street , building"
+        },
+        {
+          "_id": "5afd6ba70e0000950b53dafd",
+          "name": "305, Rue Félix-Leclerc, farmhouse"
+        },
+        {
+          "_id": "5afd6cb20e0000ed0b53db43",
+          "name": "116, Rue Jetté, revolving restaurant"
+        },
+        {
+          "_id": "5afd71e40d00002e017266ba",
+          "name": "310, Rg York, apartment"
+        },
+        {
+          "_id": "5afd75c00d0000040372677d",
+          "name": "310, Rg York, workshop"
+        },
+        {
+          "_id": "5afd91720d0000c50e726ae0",
+          "name": "31 street, land"
+        },
+        {
+          "_id": "5afd927a0d00006a0f726aed",
+          "name": "Abbeville Road, Building"
+        },
+        {
+          "_id": "5afd92bf0d00008a0f726aef",
+          "name": "South Road, farmhouse"
+        },
+        {
+          "_id": "5afd93bc0d0000a50f726af7",
+          "name": "4 Winds Drive, land"
+        },
+        {
+          "_id": "5afd942a0d0000cc0f726afe",
+          "name": "Addington Avenue, business complex"
+        },
+        {
+          "_id": "5afd94a00d0000e50f726b08",
+          "name": "Aintree Court, building"
+        },
+        {
+          "_id": "5b0408630d00006752728c99",
+          "name": "Aintree Court, building"
+        },
+        {
+          "_id": "5ba0eef40d00006e067c2d8c",
+          "name": "Car Mechanics"
+        },
+        {
+          "_id": "5ba1f9730d0000243c7c3000",
+          "name": "Car Mechanics"
+        },
+        {
+          "_id": "5ba1fbb60d0000db3c7c300e",
+          "name": "Car Mechanics"
+        }
+      ],
+      "limit": 200,
+      "offset": 0,
+      "total_count": 18
+    }
+  }
+}
+
+
+"Car Mechanics"
+        },
+        {
+          "_id": "5ba1f9730d0000243c7c3000",
+          "name": "Car Mechanics"
+        }
+      ],
+      "limit": 200,
+      "offset": 0,
+      "total_count": 19
+    }
+  }
+}
+
+ks($name: String) {\n  pokemon(name: $name) {\n    id\n    number\n    name\n    attacks {\n      special {\n        name\n        type\n        damage\n      }\n    }\n  }\n}\n","variables":{"name":"Charmander"}}
+
+13:16:45.011 response time in milliseconds: 523
+1 < 400
+1 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+1 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+1 < Access-Control-Max-Age: 3628800
+1 < Allow: *
+1 < Content-Length: 0
+1 < Date: Fri, 14 Sep 2018 07:31:44 GMT
+1 < WWW-Authenticate: Bearer error="invalid_request", error_description="Access token is not found"
+
+13:16:45.012 status code was: 400, expected: 200, response time: 523, url: http://45.55.45.137:9999/graphql, response: 

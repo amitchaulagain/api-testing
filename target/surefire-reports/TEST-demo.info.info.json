@@ -1,0 +1,93 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "first scenario",
+        "description": "",
+        "id": "runtime-metadata;first-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 43774706,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "def info \u003d karate.info",
+            "match": {
+              "arguments": [
+                {
+                  "val": "info",
+                  "offset": 4
+                },
+                {
+                  "val": "karate.info",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 4525105,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "print \u0027info:\u0027, info",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027info:\u0027, info",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "* ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "13:17:33.891 [print] info: {\n  \"featureDir\": \"/Users/admin/karate-backup/karate/karate-demo/target/test-classes/demo/info\",\n  \"scenarioType\": \"Scenario\",\n  \"featureFileName\": \"info.feature\",\n  \"errorMessage\": null,\n  \"scenarioDescription\": \"\",\n  \"scenarioName\": \"first scenario\"\n}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 332582,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "match info contains { scenarioName: \u0027first scenario\u0027, featureFileName: \u0027info.feature\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "info",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " { scenarioName: \u0027first scenario\u0027, featureFileName: \u0027info.feature\u0027 }",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      }
+    ],
+    "name": "demo/info/info.feature",
+    "description": "runtime metadata\nsuch as the feature file name and scenario name",
+    "id": "runtime-metadata",
+    "keyword": "Feature",
+    "uri": "demo/info/info.feature"
+  }
+]

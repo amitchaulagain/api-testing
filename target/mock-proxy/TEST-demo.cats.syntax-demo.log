@@ -1,0 +1,1 @@
+15:18:30.128 skipping bootstrap configuration for env: proxy - could not find or read file: karate-config-proxy.js, prefix: CLASSPATH

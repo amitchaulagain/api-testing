@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="demo of how to poll until a certain condition is met"
+           skipped="0"
+           tests="1"
+           time="0.216683">
+   <testcase classname="demo.polling.polling"
+             name="get greeting and keep polling until id is n + 5"
+             time="0.216683">
+      <system-out>* def waitUntil =...........................................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* def result = call read('get.feature').....................................passed
+* def current = result.response.............................................passed
+* print 'current: ' + current...............................................passed
+* def target = current.id + 5...............................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call get.feature..........................................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'greeting'.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call waitUntil target.....................................................passed
+</system-out>
+   </testcase>
+</testsuite>

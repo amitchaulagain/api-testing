@@ -1,0 +1,210 @@
+13:17:32.054 >> lock acquired, begin callSingle: classpath:demo/headers/common-noheaders.feature
+13:17:32.326 request:
+1 > GET http://127.0.0.1:58351/headers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:32.470 response time in milliseconds: 144
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Length: 36
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Set-Cookie: time=1537428752440
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+ecfd0f00-ec53-484d-bc88-5df6fd427a93
+
+13:17:32.481 << lock released, end callSingle: classpath:demo/headers/common-noheaders.feature
+13:17:32.555 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 14
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Bob"}
+
+13:17:32.647 response time in milliseconds: 91
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":4,"name":"Bob"}
+
+13:17:32.664 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Wild"}
+
+13:17:32.672 response time in milliseconds: 6
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":9,"name":"Wild"}
+
+13:17:32.697 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 15
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Nyan"}
+
+13:17:32.704 response time in milliseconds: 7
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":11,"name":"Nyan"}
+
+13:17:32.706 cached callonce: read('../callarray/kitten-create.feature')
+13:17:32.709 request:
+1 > GET http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:32.718 response time in milliseconds: 9
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+[{"id":1,"name":"Bob"},{"id":2,"name":"Bob"},{"id":3,"name":"Kit0"},{"id":4,"name":"Bob"},{"id":5,"name":"Nyan"},{"id":6,"name":"Wild"},{"id":7,"name":"Wild"},{"id":8,"name":"Kit1"},{"id":9,"name":"Wild"},{"id":10,"name":"Nyan"},{"id":11,"name":"Nyan"},{"id":12,"name":"Kit2"},{"id":13,"name":"Nyan"}]
+
+13:17:32.729 callonce cache hit for: read('../callarray/kitten-create.feature')
+13:17:32.730 request:
+1 > GET http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:32.735 response time in milliseconds: 4
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+[{"id":1,"name":"Bob"},{"id":2,"name":"Bob"},{"id":3,"name":"Kit0"},{"id":4,"name":"Bob"},{"id":5,"name":"Nyan"},{"id":6,"name":"Wild"},{"id":7,"name":"Wild"},{"id":8,"name":"Kit1"},{"id":9,"name":"Wild"},{"id":10,"name":"Nyan"},{"id":11,"name":"Nyan"},{"id":12,"name":"Kit2"},{"id":13,"name":"Nyan"},{"id":14,"name":"Kit3"},{"id":15,"name":"Keyboard"}]
+
+13:17:32.747 callonce cache hit for: read('../callarray/kitten-create.feature')
+13:17:32.755 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 98
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":4,"name":"Bob"},{"id":9,"name":"Wild"},{"id":11,"name":"Nyan"}]}
+
+13:17:32.767 response time in milliseconds: 11
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":20,"name":"Billie","kittens":[{"id":4,"name":"Bob"},{"id":9,"name":"Wild"},{"id":11,"name":"Nyan"}]}
+
+ld"},{"id":12,"name":"Nyan"}]}
+
+d":8,"name":"Wild"},{"id":10,"name":"Nyan"}]}
+
+:8,"name":"Wild"},{"id":12,"name":"Nyan"}]}
+
+Date: Tue, 18 Sep 2018 11:33:17 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":22,"name":"Billie","kittens":[{"id":3,"name":"Bob"},{"id":9,"name":"Wild"},{"id":15,"name":"Nyan"}]}
+
+date
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Wed, 12 Sep 2018 11:37:25 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":27,"name":"Billie","kittens":[{"id":1,"name":"Bob"},{"id":12,"name":"Wild"},{"id":18,"name":"Nyan"}]}
+
+n"},{"id":32,"name":"Keyboard"},{"id":33,"name":"LOL"},{"id":34,"name":"Ceiling"},{"id":35,"name":"Billie","kittens":[{"id":29,"name":"Bob"},{"id":30,"name":"Wild"},{"id":31,"name":"Nyan"},{"id":32,"name":"Keyboard"},{"id":33,"name":"LOL"},{"id":34,"name":"Ceiling"}]},{"id":36,"name":"Billie Edit"},{"id":37,"name":"Billie"},{"id":38,"name":"Billie"},{"id":39,"name":"Bob"},{"id":40,"name":"Wild"},{"id":41,"name":"Billie","kittens":[{"id":39,"name":"Bob"},{"id":40,"name":"Wild"}]},{"id":44,"name":"Sillie"},{"id":45,"name":"Tom"},{"id":46,"name":"Tom"},{"id":47,"name":"Tom"},{"id":48,"name":"Tom"},{"id":49,"name":"Billie"},{"id":50,"name":"Bob"},{"id":51,"name":"Wild"},{"id":52,"name":"Nyan"},{"id":53,"name":"Bob"},{"id":54,"name":"Kit0"},{"id":55,"name":"Wild"},{"id":56,"name":"Bob"},{"id":57,"name":"Nyan"},{"id":58,"name":"Kit1"},{"id":59,"name":"Nyan"},{"id":60,"name":"Wild"},{"id":61,"name":"Kit2"},{"id":62,"name":"Nyan"},{"id":63,"name":"Bob"},{"id":64,"name":"Keyboard"},{"id":65,"name":"Nyan"},{"id":66,"name":"Kit3"},{"id":67,"name":"Wild"},{"id":68,"name":"LOL"},{"id":69,"name":"Nyan"},{"id":70,"name":"Kit4"}]
+
+15:16:46.206 callonce cache hit for: read('../callarray/kitten-create.feature')
+15:16:46.208 request:
+1 > POST http://127.0.0.1:51743/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 100
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:51743
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":56,"name":"Bob"},{"id":60,"name":"Wild"},{"id":65,"name":"Nyan"}]}
+
+15:16:46.211 response time in milliseconds: 2
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Mon, 10 Sep 2018 09:31:46 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":76,"name":"Billie","kittens":[{"id":56,"name":"Bob"},{"id":60,"name":"Wild"},{"id":65,"name":"Nyan"}]}
+

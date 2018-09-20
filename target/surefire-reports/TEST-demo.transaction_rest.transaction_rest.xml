@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="1"
+           name="sample karate test script"
+           skipped="0"
+           tests="1"
+           time="0.012404">
+   <testcase classname="demo.transaction_rest.transaction_rest"
+             name="get all transactions"
+             time="0.012404">
+      <failure message="com.intuit.karate.exception.KarateException&#xA;&#x9;at com.intuit.karate.StepDefs.method(StepDefs.java:368)&#xA;&#x9;at ✽.When method get(/Users/admin/rew3-testing/karate/karate-demo/target/test-classes/demo/transaction_rest/transaction_rest.feature:10)&#xA;">* url 'http:159.203.162.230:8080/financial/v1'..............................passed
+Given path 'commission/transaction'.........................................passed
+When method get.............................................................failed
+Then status 200.............................................................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException
+	at com.intuit.karate.StepDefs.method(StepDefs.java:368)
+	at ✽.When method get(/Users/admin/rew3-testing/karate/karate-demo/target/test-classes/demo/transaction_rest/transaction_rest.feature:10)
+</failure>
+   </testcase>
+</testsuite>

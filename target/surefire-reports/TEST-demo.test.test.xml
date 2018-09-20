@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="sample karate test script"
+           skipped="0"
+           tests="1"
+           time="2.377231">
+   <testcase classname="demo.test.test"
+             name="get all users and then get the first user by id"
+             time="2.377231">
+      <system-out>* url 'http://159.203.162.230:8080/financial/v1'............................passed
+Given path 'commission/transaction'.........................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* def first = response.data[0]..............................................passed
+Given path 'commission/transaction', first._id..............................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+</system-out>
+   </testcase>
+</testsuite>

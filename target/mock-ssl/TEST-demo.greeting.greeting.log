@@ -1,0 +1,26 @@
+15:18:30.714 skipping bootstrap configuration for env: mock - could not find or read file: karate-config-mock.js, prefix: CLASSPATH
+15:18:30.716 request:
+1 > GET https://127.0.0.1:52639/greeting
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:52639
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+15:18:30.731 response time in milliseconds: 15
+1 < 200
+1 < Content-Type: application/json
+{"id":6,"content":"Hello World!"}
+
+15:18:30.734 skipping bootstrap configuration for env: mock - could not find or read file: karate-config-mock.js, prefix: CLASSPATH
+15:18:30.736 request:
+1 > GET https://127.0.0.1:52639/greeting?name=Billie
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 127.0.0.1:52639
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+15:18:30.749 response time in milliseconds: 13
+1 < 200
+1 < Content-Type: application/json
+{"id":7,"content":"Hello Billie!"}
+

@@ -1,0 +1,176 @@
+13:17:34.493 [print] {
+  "addTransaction": {
+    "name": "Car Mechanics",
+    "description": "big space with power backup facilities",
+    "price_detail": {
+      "list_price": 10000,
+      "sell_price": 9000
+    },
+    "transaction_type": "BUY",
+    "property_id": "7aa97b1a78ee4505cc03ac4",
+    "accepted_date": "2017-12-26",
+    "transaction_status": "PAYMENT",
+    "transaction_date": "2018-03-15",
+    "closing_date": "2018-03-25",
+    "listed_on": "2017-02-27",
+    "closing_status": "RE_CLOSE",
+    "visibility": {
+      "visibility_type": "INDIVIDUAL",
+      "individual_visibility": {
+        "_id": "5aa99b1a0e055nm01ef03ac5",
+        "first_name": "Rio",
+        "last_name": "Heart"
+      }
+    },
+    "transaction_buyer": [
+      {
+        "_id": "6aa97b1a0e11225603nc2",
+        "first_name": "Remo",
+        "last_name": "Black"
+      }
+    ],
+    "transaction_seller": [
+      {
+        "_id": "5aa99b1a0e055nm01ef03ac5",
+        "first_name": "Rio",
+        "last_name": "Heart"
+      },
+      {
+        "_id": "5aa33b1a0e0766b01ef09ac9",
+        "first_name": "Jett",
+        "last_name": "Turing"
+      }
+    ],
+    "transaction_agent": [
+      {
+        "_id": "80a97b1a0e0033771ef03ac0",
+        "first_name": "Katie",
+        "last_name": "Cruise"
+      },
+      {
+        "_id": "5aa97b1a090000b015503ac7",
+        "first_name": "Maria",
+        "last_name": "Tetovo"
+      }
+    ],
+    "side": "BUYING",
+    "status": "ACTIVE"
+  }
+}
+
+13:17:34.503 request:
+1 > POST http://45.55.45.137:9999/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0
+1 > Connection: Keep-Alive
+1 > Content-Length: 1199
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 45.55.45.137:9999
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"query":"mutation test($addTransaction: AddTransactionInput!){\n addTransaction(addTransactionsData:$addTransaction){\n  id\n  status\n  data {\n   _id\n   name\n  }\n }\n}","variables":{"addTransaction":{"name":"Car Mechanics","description":"big space with power backup facilities","price_detail":{"list_price":10000,"sell_price":9000},"transaction_type":"BUY","property_id":"7aa97b1a78ee4505cc03ac4","accepted_date":"2017-12-26","transaction_status":"PAYMENT","transaction_date":"2018-03-15","closing_date":"2018-03-25","listed_on":"2017-02-27","closing_status":"RE_CLOSE","visibility":{"visibility_type":"INDIVIDUAL","individual_visibility":{"_id":"5aa99b1a0e055nm01ef03ac5","first_name":"Rio","last_name":"Heart"}},"transaction_buyer":[{"_id":"6aa97b1a0e11225603nc2","first_name":"Remo","last_name":"Black"}],"transaction_seller":[{"_id":"5aa99b1a0e055nm01ef03ac5","first_name":"Rio","last_name":"Heart"},{"_id":"5aa33b1a0e0766b01ef09ac9","first_name":"Jett","last_name":"Turing"}],"transaction_agent":[{"_id":"80a97b1a0e0033771ef03ac0","first_name":"Katie","last_name":"Cruise"},{"_id":"5aa97b1a090000b015503ac7","first_name":"Maria","last_name":"Tetovo"}],"side":"BUYING","status":"ACTIVE"}}}
+
+13:17:35.255 response time in milliseconds: 751
+1 < 200
+1 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+1 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+1 < Access-Control-Max-Age: 3628800
+1 < Allow: *
+1 < Content-Length: 145
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Thu, 20 Sep 2018 07:32:34 GMT
+{"data":{"addTransaction":{"id":"5ba34d120e0000d505fea970","status":"CREATED","data":{"_id":"5ba34d120e0000d505fea970","name":"Car Mechanics"}}}}
+
+13:17:35.272 [print] {
+  "_id": "5ba34d120e0000d505fea970"
+}
+
+13:17:35.295 request:
+2 > POST http://45.55.45.137:9999/graphql
+2 > Accept: application/json
+2 > Accept-Encoding: gzip,deflate
+2 > Authorization: Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0
+2 > Connection: Keep-Alive
+2 > Content-Length: 131
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: 45.55.45.137:9999
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"query":"query test($_id:String!){\n transaction(id: $_id){\n  _id\n  name\n }\n}","variables":{"_id":"5ba34d120e0000d505fea970"}}
+
+13:17:36.266 response time in milliseconds: 971
+2 < 200
+2 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+2 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+2 < Access-Control-Max-Age: 3628800
+2 < Allow: *
+2 < Content-Length: 82
+2 < Content-Type: application/json; charset=utf-8
+2 < Date: Thu, 20 Sep 2018 07:32:35 GMT
+{"data":{"transaction":{"_id":"5ba34d120e0000d505fea970","name":"Car Mechanics"}}}
+
+13:17:36.278 [print] {
+  "_id": "5ba34d120e0000d505fea970"
+}
+
+13:17:36.281 request:
+3 > POST http://45.55.45.137:9999/graphql
+3 > Accept: application/json
+3 > Accept-Encoding: gzip,deflate
+3 > Authorization: Bearer OWYwODcxOTEtNjQ0Yy00YjdkLTlhOWItYTNmOTI5ZGExMGUz
+3 > Connection: Keep-Alive
+3 > Content-Length: 152
+3 > Content-Type: application/json; charset=UTF-8
+3 > Host: 45.55.45.137:9999
+3 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"query":"mutation test($_id:String!){\n deleteTransaction(id: $_id){\n  id\n  status\n  message\n }\n}","variables":{"_id":"5ba34d120e0000d505fea970"}}
+
+13:17:36.880 response time in milliseconds: 599
+3 < 200
+3 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+3 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+3 < Access-Control-Max-Age: 3628800
+3 < Allow: *
+3 < Content-Length: 128
+3 < Content-Type: application/json; charset=utf-8
+3 < Date: Thu, 20 Sep 2018 07:32:36 GMT
+{"data":{"deleteTransaction":{"id":"5ba34d120e0000d505fea970","status":"DELETED","message":"Transaction successfully deleted"}}}
+
+13:17:36.896 request:
+1 > POST http://45.55.45.137:9999/graphql
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Authorization: Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0
+1 > Connection: Keep-Alive
+1 > Content-Length: 113
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 45.55.45.137:9999
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"query":"query test {\n transactions{\n  data {\n   _id\n   name\n  }\n  limit\n  offset\n  total_count\n }\n}"}
+
+13:17:37.515 response time in milliseconds: 617
+1 < 200
+1 < Access-Control-Allow-Headers: Authorization, Origin, x-requested-with,content-type,Cache-Control,Pragma,Date,REW3-AUTH-TOKEN,If-Match,domain-model,If-None-Match,Csrf-Token
+1 < Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE, PATCH
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Expose-Headers: WWW-Authenticate, Server-Authorization
+1 < Access-Control-Max-Age: 3628800
+1 < Allow: *
+1 < Content-Length: 247
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Thu, 20 Sep 2018 07:32:37 GMT
+{"data":{"transactions":{"data":[{"_id":"5b28bb710d00004b028566ab","name":"Test Transaction"},{"_id":"5b3baacd0c0000de194c3702","name":"Logan"},{"_id":"5b7d71ac0d0000d91e90018f","name":"Test Transaction"}],"limit":200,"offset":0,"total_count":3}}}
+
+n"},{"_id":"5b7d71ac0d0000d91e90018f","name":"Test Transaction"}],"limit":200,"offset":0,"total_count":3}}}
+
+0d91e90018f","name":"Test Transaction"},{"_id":"5ba33fc30e0000ad02fea92c","name":"Car Mechanics"}],"limit":200,"offset":0,"total_count":4}}}
+
+l_count":5}}}
+
+echanics"},{"_id":"5ba23c730e0000e0052aca54","name":"Car Mechanics"},{"_id":"5ba23cd10e0000f7052aca58","name":"Car Mechanics"},{"_id":"5ba23d410e00000d062aca5a","name":"Car Mechanics"},{"_id":"5ba23dd50e000037062aca60","name":"Car Mechanics"},{"_id":"5ba332bb0e00001e3a2ad20b","name":"Car Mechanics"}],"limit":200,"offset":0,"total_count":11}}}
+

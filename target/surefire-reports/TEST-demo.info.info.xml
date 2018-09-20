@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="runtime metadata"
+           skipped="0"
+           tests="1"
+           time="0.048632">
+   <testcase classname="demo.info.info" name="first scenario" time="0.048632">
+      <system-out>* def info = karate.info....................................................passed
+* print 'info:', info.......................................................passed
+* match info contains { scenarioName: 'first scenario', featureFileName: 'info.feature' }.passed
+</system-out>
+   </testcase>
+</testsuite>

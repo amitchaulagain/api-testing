@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite failures="0"
+           name="call multiple scenarios but use a common validation routine"
+           skipped="0"
+           tests="1"
+           time="0.29999">
+   <testcase classname="demo.loopcall.loop" name="main loop" time="0.29999">
+      <system-out>* def types = ['json', 'xml'];..............................................passed
+* def cat = { name: 'Tom' }.................................................passed
+* def fun = read('loop.js').................................................passed
+* call [create xml] create-json.feature.....................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And request { name: '#(name)' }.............................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def id = response.id......................................................passed
+* call [common validation routine] result.feature...........................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats', id.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* call [create xml] create-xml.feature......................................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats'.............................................................passed
+And header Accept = 'application/xml'.......................................passed
+And request &lt;cat&gt;&lt;name&gt;#(name)&lt;/name&gt;&lt;/cat&gt;.................................passed
+When method post............................................................passed
+Then status 200.............................................................passed
+* def id = /cat/id..........................................................passed
+* call [common validation routine] result.feature...........................passed
+Given url demoBaseUrl.......................................................passed
+And path 'cats', id.........................................................passed
+When method get.............................................................passed
+Then status 200.............................................................passed
+* def response = fun(types, cat)............................................passed
+* assert response.length == 2...............................................passed
+* match each response == { id: '#number', name: 'Tom' }.....................passed
+* match each response contains cat..........................................passed
+* match response == '#[2] ^cat'.............................................passed
+</system-out>
+   </testcase>
+</testsuite>

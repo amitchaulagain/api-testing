@@ -1,0 +1,332 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 32959452,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl + \u0027/soap\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl + \u0027/soap\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 5,
+            "value": "# this live url should work if you want to try this on your own"
+          },
+          {
+            "line": 6,
+            "value": "# * url \u0027http://www.dneonline.com/calculator.asmx\u0027"
+          }
+        ],
+        "line": 8,
+        "name": "soap 1.1",
+        "description": "",
+        "id": "test-soap-end-point;soap-1.1",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6798372,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "request",
+            "match": {
+              "location": "StepDefs.requestDocString(String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 10,
+              "value": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"utf-8\"?\u003e\n\u003csoap:Envelope xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\" xmlns:soap\u003d\"http://schemas.xmlsoap.org/soap/envelope/\"\u003e\n  \u003csoap:Body\u003e\n    \u003cAdd xmlns\u003d\"http://tempuri.org/\"\u003e\n      \u003cintA\u003e2\u003c/intA\u003e\n      \u003cintB\u003e3\u003c/intB\u003e\n    \u003c/Add\u003e\n  \u003c/soap:Body\u003e\n\u003c/soap:Envelope\u003e"
+            }
+          },
+          {
+            "result": {
+              "duration": 25808302,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "soap action \u0027http://tempuri.org/Add\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": " \u0027http://tempuri.org/Add\u0027",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.soapAction(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 21,
+              "value": "13:17:34.388 request:\n1 \u003e POST http://127.0.0.1:58351/soap\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 306\n1 \u003e Content-Type: text/xml; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e SOAPAction: http://tempuri.org/Add\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\u003csoap:Envelope xmlns:soap\u003d\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\"\u003e\n  \u003csoap:Body\u003e\n    \u003cAdd xmlns\u003d\"http://tempuri.org/\"\u003e\n      \u003cintA\u003e2\u003c/intA\u003e\n      \u003cintB\u003e3\u003c/intB\u003e\n    \u003c/Add\u003e\n  \u003c/soap:Body\u003e\n\u003c/soap:Envelope\u003e\n\n13:17:34.396 response time in milliseconds: 7\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 323\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\u003c?xml version\u003d\"1.0\" encoding\u003d\"utf-8\"?\u003e\u003csoap:Envelope xmlns:soap\u003d\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\"\u003e\u003csoap:Body\u003e\u003cAddResponse xmlns\u003d\"http://tempuri.org/\"\u003e\u003cAddResult\u003e5\u003c/AddResult\u003e\u003c/AddResponse\u003e\u003c/soap:Body\u003e\u003c/soap:Envelope\u003e\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 116642,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5125406,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "match /Envelope/Body/AddResponse/AddResult \u003d\u003d 5",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "/Envelope/Body/AddResponse/AddResult",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 43
+                },
+                {
+                  "val": "5",
+                  "offset": 46
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5628365,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "print \u0027response: \u0027, response",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027response: \u0027, response",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 24,
+              "value": "13:17:34.410 [print] response:  \u003csoap:Envelope xmlns:soap\u003d\"http://www.w3.org/2003/05/soap-envelope\"\n               xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\"\n               xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\"\u003e\n   \u003csoap:Body\u003e\n      \u003cAddResponse xmlns\u003d\"http://tempuri.org/\"\u003e\n         \u003cAddResult\u003e5\u003c/AddResult\u003e\n      \u003c/AddResponse\u003e\n   \u003c/soap:Body\u003e\n\u003c/soap:Envelope\u003e\n\n"
+            }
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7826764,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl + \u0027/soap\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl + \u0027/soap\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 26,
+        "name": "soap 1.2",
+        "description": "",
+        "id": "test-soap-end-point;soap-1.2",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8934329,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "request read(\u0027request.xml\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "read(\u0027request.xml\u0027)",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 12001049,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 28,
+                "value": "# soap is just an HTTP POST, so here we set the required header manually .."
+              }
+            ],
+            "line": 29,
+            "name": "header Content-Type \u003d \u0027application/soap+xml; charset\u003dutf-8\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027application/soap+xml; charset\u003dutf-8\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12794092,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 30,
+                "value": "# .. and then we use the \u0027method keyword\u0027 instead of \u0027soap action\u0027"
+              }
+            ],
+            "line": 31,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 31,
+              "value": "13:17:34.445 request:\n1 \u003e POST http://127.0.0.1:58351/soap\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 314\n1 \u003e Content-Type: application/soap+xml; charset\u003dUTF-8\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\u003csoap12:Envelope xmlns:soap12\u003d\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\"\u003e\n  \u003csoap12:Body\u003e\n    \u003cAdd xmlns\u003d\"http://tempuri.org/\"\u003e\n      \u003cintA\u003e2\u003c/intA\u003e\n      \u003cintB\u003e3\u003c/intB\u003e\n    \u003c/Add\u003e\n  \u003c/soap12:Body\u003e\n\u003c/soap12:Envelope\u003e\n\n13:17:34.450 response time in milliseconds: 5\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Length: 325\n1 \u003c Content-Type: text/plain;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:33 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n\u003c?xml version\u003d\"1.0\" encoding\u003d\"utf-8\"?\u003e\u003csoap:Envelope xmlns:soap\u003d\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi\u003d\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd\u003d\"http://www.w3.org/2001/XMLSchema\"\u003e\u003csoap:Body\u003e\u003cAddResponse xmlns\u003d\"http://tempuri.org/\"\u003e\u003cAddResult\u003e5\u003c/AddResult\u003e\u003c/AddResponse\u003e\u003c/soap:Body\u003e\u003c/soap:Envelope\u003e\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 79486,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15982695,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 33,
+                "value": "# note how we focus only on the relevant part of the payload and read expected XML from a file"
+              }
+            ],
+            "line": 34,
+            "name": "match /Envelope/Body/AddResponse \u003d\u003d read(\u0027expected.xml\u0027)",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "/Envelope/Body/AddResponse",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 33
+                },
+                {
+                  "val": "read(\u0027expected.xml\u0027)",
+                  "offset": 36
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "demo/soap/soap.feature",
+    "description": "test soap end point",
+    "id": "test-soap-end-point",
+    "keyword": "Feature",
+    "uri": "demo/soap/soap.feature"
+  }
+]

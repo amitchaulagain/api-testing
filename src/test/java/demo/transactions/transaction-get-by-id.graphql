@@ -1,0 +1,6 @@
+query test($_id:String!){
+ transaction(id: $_id){
+  _id
+  name
+ }
+}

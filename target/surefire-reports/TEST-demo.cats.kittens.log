@@ -1,0 +1,132 @@
+13:17:32.939 request:
+1 > POST http://127.0.0.1:58351/cats
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 14
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Bob"}
+
+13:17:32.945 response time in milliseconds: 5
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Type: application/json;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"id":31,"name":"Bob"}
+
+13:17:32.950 [print] bob: {
+  "id": 31,
+  "name": "Bob"
+}
+
+13:17:32.957 request:
+2 > POST http://127.0.0.1:58351/cats
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 15
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: 127.0.0.1:58351
+2 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Wild"}
+
+13:17:32.968 response time in milliseconds: 11
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Content-Type: application/json;charset=UTF-8
+2 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+2 < Expires: 0
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"id":36,"name":"Wild"}
+
+13:17:32.989 [print] wild: {
+  "id": 36,
+  "name": "Wild"
+}
+
+13:17:33.000 request:
+3 > POST http://127.0.0.1:58351/cats
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Content-Length: 76
+3 > Content-Type: application/json; charset=UTF-8
+3 > Host: 127.0.0.1:58351
+3 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+{"name":"Billie","kittens":[{"id":31,"name":"Bob"},{"id":36,"name":"Wild"}]}
+
+13:17:33.015 response time in milliseconds: 13
+3 < 200
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Content-Type: application/json;charset=UTF-8
+3 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+3 < Expires: 0
+3 < Pragma: no-cache
+3 < Transfer-Encoding: chunked
+3 < X-Content-Type-Options: nosniff
+3 < X-Frame-Options: DENY
+3 < X-XSS-Protection: 1; mode=block
+{"id":40,"name":"Billie","kittens":[{"id":31,"name":"Bob"},{"id":36,"name":"Wild"}]}
+
+13:17:33.039 request:
+4 > GET http://127.0.0.1:58351/cats/40/kittens
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: 127.0.0.1:58351
+4 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+
+13:17:33.050 response time in milliseconds: 10
+4 < 200
+4 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 < Content-Type: application/json;charset=UTF-8
+4 < Date: Thu, 20 Sep 2018 07:32:32 GMT
+4 < Expires: 0
+4 < Pragma: no-cache
+4 < Transfer-Encoding: chunked
+4 < X-Content-Type-Options: nosniff
+4 < X-Frame-Options: DENY
+4 < X-XSS-Protection: 1; mode=block
+[{"id":31,"name":"Bob"},{"id":36,"name":"Wild"}]
+
+ect Object]
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:49.419 javascript function call failed: 
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:49.419 failed function body: function() {
+  karate.configure('connectTimeout', 5000);
+  karate.configure('readTimeout', 5000);  
+  var port = karate.properties['demo.server.port'];  
+  if (!port) {
+    port = karate.env == 'web' ? 8090 : 8080;
+  }
+  var protocol = 'http';
+  if (karate.properties['demo.server.https'] == 'true') {
+    protocol = 'https';
+    karate.configure('ssl', true);
+  }  
+  var config = { demoBaseUrl: protocol + '://127.0.0.1:' + port };
+  if (karate.env == 'proxy') {
+    var proxyPort = karate.properties['demo.proxy.port']
+    karate.configure('proxy', 'http://127.0.0.1:' + proxyPort);
+  }
+  if (karate.env != 'mock' && karate.env != 'proxy' && karate.env != 'contract') {
+    // 'callSingle' is guaranteed to run only once even across all threads
+    var result = karate.callSingle('classpath:demo/headers/common-noheaders.feature', config);
+    // and it sets a variable called 'authInfo' used in headers-single.feature
+    config.authInfo = { authTime: result.time, authToken: result.token };
+  }
+  return config;
+}

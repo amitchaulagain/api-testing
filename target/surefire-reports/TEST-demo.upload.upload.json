@@ -1,0 +1,1024 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8865585,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "upload file",
+        "description": "",
+        "id": "file-upload-end-point;upload-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 166964,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "path \u0027files\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 973492,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 8,
+                "value": "# refer to the second scenario in this file for how to set the upload filename using the \u0027multipart file\u0027 syntax"
+              }
+            ],
+            "line": 9,
+            "name": "multipart field myFile \u003d read(\u0027test.pdf\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFile",
+                  "offset": 16
+                },
+                {
+                  "val": "read(\u0027test.pdf\u0027)",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 190084,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "multipart field message \u003d \u0027hello world\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 16
+                },
+                {
+                  "val": "\u0027hello world\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14271978,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 11,
+              "value": "13:17:34.660 request:\n1 \u003e POST http://127.0.0.1:58351/files\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Type: multipart/form-data; boundary\u003dF0sRmd6bLcVw45J-NKmOv0H3_iya_N2ZLiOqRJ\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e Transfer-Encoding: chunked\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.672 response time in milliseconds: 11\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:34 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":\"c4787f35-8283-4f62-9912-f04df6ac4cff\",\"filename\":\"myFile\",\"message\":\"hello world\",\"contentType\":\"application/octet-stream\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 98647,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 662544,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "match response \u003d\u003d { id: \u0027#uuid\u0027, filename: \u0027myFile\u0027, message: \u0027hello world\u0027, contentType: \u0027application/octet-stream\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#uuid\u0027, filename: \u0027myFile\u0027, message: \u0027hello world\u0027, contentType: \u0027application/octet-stream\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 480247,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "def id \u003d response.id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 4
+                },
+                {
+                  "val": "response.id",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 241370,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "path \u0027files\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11699794,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 17,
+              "value": "13:17:34.678 request:\n2 \u003e GET http://127.0.0.1:58351/files/c4787f35-8283-4f62-9912-f04df6ac4cff\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Host: 127.0.0.1:58351\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.686 response time in milliseconds: 8\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Disposition: attachment; filename\u003d\"myFile\"\n2 \u003c Content-Length: 6514\n2 \u003c Content-Type: application/octet-stream\n2 \u003c Date: Thu, 20 Sep 2018 07:32:34 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 59562,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1329433,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "match response \u003d\u003d read(\u0027test.pdf\u0027)",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "read(\u0027test.pdf\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 636374,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "match header Content-Disposition contains \u0027attachment\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Disposition",
+                  "offset": 12
+                },
+                {},
+                {},
+                {
+                  "val": " \u0027attachment\u0027",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5152221,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "match header Content-Disposition contains \u0027myFile\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Disposition",
+                  "offset": 12
+                },
+                {},
+                {},
+                {
+                  "val": " \u0027myFile\u0027",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3494639,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "match header Content-Type \u003d\u003d \u0027application/octet-stream\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Type",
+                  "offset": 12
+                },
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 26
+                },
+                {
+                  "val": "\u0027application/octet-stream\u0027",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4975588,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 24,
+                "value": "# example of calling custom java code from karate"
+              }
+            ],
+            "line": 25,
+            "name": "def FileChecker \u003d Java.type(\u0027com.intuit.karate.demo.util.FileChecker\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FileChecker",
+                  "offset": 4
+                },
+                {
+                  "val": "Java.type(\u0027com.intuit.karate.demo.util.FileChecker\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 9719137,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 26,
+                "value": "# example of parsing a string into json by karate"
+              }
+            ],
+            "line": 27,
+            "name": "json fileInfo \u003d FileChecker.getMetadata(id)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "fileInfo",
+                  "offset": 5
+                },
+                {
+                  "val": "FileChecker.getMetadata(id)",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefs.castToJson(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 3617030,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "match fileInfo \u003d\u003d { id: \u0027#(id)\u0027, filename: \u0027myFile\u0027, message: \u0027hello world\u0027, contentType: \u0027application/octet-stream\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "fileInfo",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#(id)\u0027, filename: \u0027myFile\u0027, message: \u0027hello world\u0027, contentType: \u0027application/octet-stream\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5717453,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 30,
+        "name": "upload with filename and content-type specified",
+        "description": "",
+        "id": "file-upload-end-point;upload-with-filename-and-content-type-specified",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1612242,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "path \u0027files\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 154886,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "multipart file myFile \u003d { read: \u0027test.pdf\u0027, filename: \u0027upload-name.pdf\u0027, contentType: \u0027application/pdf\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFile",
+                  "offset": 15
+                },
+                {
+                  "val": "{ read: \u0027test.pdf\u0027, filename: \u0027upload-name.pdf\u0027, contentType: \u0027application/pdf\u0027 }",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefs.multiPartFile(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93542,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "multipart field message \u003d \u0027hello world\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 16
+                },
+                {
+                  "val": "\u0027hello world\u0027",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7943777,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 34,
+              "value": "13:17:34.729 request:\n1 \u003e POST http://127.0.0.1:58351/files\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Type: multipart/form-data; boundary\u003dEZkYo1vJifsxCfUroFauJW--gcF3kz6CIRGYml1I\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e Transfer-Encoding: chunked\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.736 response time in milliseconds: 6\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:34 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":\"f81d8b04-4980-4a7f-b40a-e678d503547f\",\"filename\":\"upload-name.pdf\",\"message\":\"hello world\",\"contentType\":\"application/pdf\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 29489,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 148763,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "match response \u003d\u003d { id: \u0027#uuid\u0027, filename: \u0027upload-name.pdf\u0027, message: \u0027hello world\u0027, contentType: \u0027application/pdf\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#uuid\u0027, filename: \u0027upload-name.pdf\u0027, message: \u0027hello world\u0027, contentType: \u0027application/pdf\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 281158,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "def id \u003d response.id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 4
+                },
+                {
+                  "val": "response.id",
+                  "offset": 9
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88885,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "path \u0027files\u0027, id",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027, id",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3853231,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "method get",
+            "match": {
+              "arguments": [
+                {
+                  "val": "get",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 40,
+              "value": "13:17:34.738 request:\n2 \u003e GET http://127.0.0.1:58351/files/f81d8b04-4980-4a7f-b40a-e678d503547f\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Host: 127.0.0.1:58351\n2 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.741 response time in milliseconds: 3\n2 \u003c 200\n2 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n2 \u003c Content-Disposition: attachment; filename\u003d\"upload-name.pdf\"\n2 \u003c Content-Length: 6514\n2 \u003c Content-Type: application/pdf\n2 \u003c Date: Thu, 20 Sep 2018 07:32:34 GMT\n2 \u003c Expires: 0\n2 \u003c Pragma: no-cache\n2 \u003c X-Content-Type-Options: nosniff\n2 \u003c X-Frame-Options: DENY\n2 \u003c X-XSS-Protection: 1; mode\u003dblock\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 27456,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2237493,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "match response \u003d\u003d read(\u0027test.pdf\u0027)",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "read(\u0027test.pdf\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3052370,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "match header Content-Disposition contains \u0027attachment\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Disposition",
+                  "offset": 12
+                },
+                {},
+                {},
+                {
+                  "val": " \u0027attachment\u0027",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2790177,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "match header Content-Disposition contains \u0027upload-name.pdf\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Disposition",
+                  "offset": 12
+                },
+                {},
+                {},
+                {
+                  "val": " \u0027upload-name.pdf\u0027",
+                  "offset": 41
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3679155,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "match header Content-Type \u003d\u003d \u0027application/pdf\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "header",
+                  "offset": 6
+                },
+                {
+                  "val": " Content-Type",
+                  "offset": 12
+                },
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 26
+                },
+                {
+                  "val": "\u0027application/pdf\u0027",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7399302,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "url demoBaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "demoBaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "* "
+          }
+        ]
+      },
+      {
+        "line": 47,
+        "name": "upload multipart/mixed",
+        "description": "",
+        "id": "file-upload-end-point;upload-multipart/mixed",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4891155,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "path \u0027files\u0027, \u0027mixed\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027files\u0027, \u0027mixed\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 157441,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "multipart field myJson \u003d { text: \u0027hello world\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myJson",
+                  "offset": 16
+                },
+                {
+                  "val": "{ text: \u0027hello world\u0027 }",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefs.multiPartFormField(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 201515,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "multipart file myFile \u003d { read: \u0027test.pdf\u0027, filename: \u0027upload-name.pdf\u0027, contentType: \u0027application/pdf\u0027 }",
+            "match": {
+              "arguments": [
+                {
+                  "val": "myFile",
+                  "offset": 15
+                },
+                {
+                  "val": "{ read: \u0027test.pdf\u0027, filename: \u0027upload-name.pdf\u0027, contentType: \u0027application/pdf\u0027 }",
+                  "offset": 24
+                }
+              ],
+              "location": "StepDefs.multiPartFile(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13652960,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "header Content-Type \u003d \u0027multipart/mixed\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Content-Type",
+                  "offset": 7
+                },
+                {
+                  "val": "\u0027multipart/mixed\u0027",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.header(String,String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31785959,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "method post",
+            "match": {
+              "arguments": [
+                {
+                  "val": "post",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 52,
+              "value": "13:17:34.789 request:\n1 \u003e POST http://127.0.0.1:58351/files/mixed\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Type: multipart/mixed; boundary\u003dYZBFkdYvxwzx6ruwVWCNzXEZhapYRRU4HEVCfErS\n1 \u003e Host: 127.0.0.1:58351\n1 \u003e Transfer-Encoding: chunked\n1 \u003e User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)\n\n13:17:34.817 response time in milliseconds: 27\n1 \u003c 200\n1 \u003c Cache-Control: no-cache, no-store, max-age\u003d0, must-revalidate\n1 \u003c Content-Type: application/json;charset\u003dUTF-8\n1 \u003c Date: Thu, 20 Sep 2018 07:32:34 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: no-cache\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n1 \u003c X-XSS-Protection: 1; mode\u003dblock\n{\"id\":\"cb7a715c-d20c-4d87-a1e5-a6f8d2c0a579\",\"filename\":\"upload-name.pdf\",\"message\":\"hello world\",\"contentType\":\"application/pdf\"}\n\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 59160,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 207855,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "match response \u003d\u003d { id: \u0027#uuid\u0027, filename: \u0027upload-name.pdf\u0027, message: \u0027hello world\u0027, contentType: \u0027application/pdf\u0027 }",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "{ id: \u0027#uuid\u0027, filename: \u0027upload-name.pdf\u0027, message: \u0027hello world\u0027, contentType: \u0027application/pdf\u0027 }",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "demo/upload/upload.feature",
+    "description": "file upload end-point",
+    "id": "file-upload-end-point",
+    "keyword": "Feature",
+    "uri": "demo/upload/upload.feature"
+  }
+]

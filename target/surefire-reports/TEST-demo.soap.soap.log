@@ -1,0 +1,103 @@
+13:17:34.388 request:
+1 > POST http://127.0.0.1:58351/soap
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 306
+1 > Content-Type: text/xml; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > SOAPAction: http://tempuri.org/Add
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>2</intA>
+      <intB>3</intB>
+    </Add>
+  </soap:Body>
+</soap:Envelope>
+
+13:17:34.396 response time in milliseconds: 7
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Length: 323
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>5</AddResult></AddResponse></soap:Body></soap:Envelope>
+
+13:17:34.410 [print] response:  <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soap:Body>
+      <AddResponse xmlns="http://tempuri.org/">
+         <AddResult>5</AddResult>
+      </AddResponse>
+   </soap:Body>
+</soap:Envelope>
+
+13:17:34.445 request:
+1 > POST http://127.0.0.1:58351/soap
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 314
+1 > Content-Type: application/soap+xml; charset=UTF-8
+1 > Host: 127.0.0.1:58351
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_162)
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soap12:Body>
+    <Add xmlns="http://tempuri.org/">
+      <intA>2</intA>
+      <intB>3</intB>
+    </Add>
+  </soap12:Body>
+</soap12:Envelope>
+
+13:17:34.450 response time in milliseconds: 5
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Content-Length: 325
+1 < Content-Type: text/plain;charset=UTF-8
+1 < Date: Thu, 20 Sep 2018 07:32:33 GMT
+1 < Expires: 0
+1 < Pragma: no-cache
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><AddResponse xmlns="http://tempuri.org/"><AddResult>5</AddResult></AddResponse></soap:Body></soap:Envelope>
+
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:50.375 javascript function call failed: 
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused (Connection refused)
+13:06:50.375 failed function body: function() {
+  karate.configure('connectTimeout', 5000);
+  karate.configure('readTimeout', 5000);  
+  var port = karate.properties['demo.server.port'];  
+  if (!port) {
+    port = karate.env == 'web' ? 8090 : 8080;
+  }
+  var protocol = 'http';
+  if (karate.properties['demo.server.https'] == 'true') {
+    protocol = 'https';
+    karate.configure('ssl', true);
+  }  
+  var config = { demoBaseUrl: protocol + '://127.0.0.1:' + port };
+  if (karate.env == 'proxy') {
+    var proxyPort = karate.properties['demo.proxy.port']
+    karate.configure('proxy', 'http://127.0.0.1:' + proxyPort);
+  }
+  if (karate.env != 'mock' && karate.env != 'proxy' && karate.env != 'contract') {
+    // 'callSingle' is guaranteed to run only once even across all threads
+    var result = karate.callSingle('classpath:demo/headers/common-noheaders.feature', config);
+    // and it sets a variable called 'authInfo' used in headers-single.feature
+    config.authInfo = { authTime: result.time, authToken: result.token };
+  }
+  return config;
+}
