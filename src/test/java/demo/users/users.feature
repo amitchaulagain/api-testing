@@ -41,7 +41,7 @@ Scenario: create a user and then get it by id
 """
 
 Given url 'https://jsonplaceholder.typicode.com/users'
-And request user
+And request { name: 'Billie' }
 When method post
 Then status 201
 
