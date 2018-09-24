@@ -1,0 +1,7 @@
+mutation test($_id:String!){
+ deleteContact(id: $_id){
+  id
+  status
+  message
+ }
+}

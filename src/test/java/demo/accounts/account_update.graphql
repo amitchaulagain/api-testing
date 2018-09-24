@@ -1,0 +1,17 @@
+mutation SomeTT($_id:String!, $updateAccount: UpdateAccountInput!){
+updateAccount(updateAccountData:$updateAccount, id: $_id)
+{
+id
+status
+data{
+account
+{
+no_of_employees
+}
+name
+parent_account{
+_id
+}
+}
+}
+}

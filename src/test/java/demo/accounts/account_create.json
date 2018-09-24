@@ -1,0 +1,35 @@
+{
+  "addAccount": {
+  "name": "Larson and Turbo",
+  "description": "This is the test description",
+  "account": {
+    "industry": "582427be640000e50143a024",
+    "type": "582427be640000e50143a024",
+    "no_of_employees": "582427be640000e50143a024",
+    "website": "582427be640000e50143a024",
+    "inactive_days": 5
+  },
+  "phone_number": [{
+    "phone_type": "582449b05a00009700b16b25",
+    "value": "8109965210",
+    "is_primary": 0
+  }],
+  "emails": [{
+    "email_type": "58219bab6300000a014fbd32",
+    "value": "larson&turbo@gmail.com",
+    "is_primary": 0
+  }],
+  "address": {
+    "city": "58219bd86300000a014fbda7",
+    "country": "58219be663000005014fbdc1",
+    "zip": "10450",
+    "mailing_street": "Kansas 420",
+    "province": "New Castle"
+  },
+  "owner": {
+    "_id": "58219bd86300000a014fbda7",
+    "first_name": "Holly",
+    "last_name": "Willms"
+  }
+}
+}

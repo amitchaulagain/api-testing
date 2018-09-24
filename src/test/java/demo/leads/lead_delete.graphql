@@ -1,0 +1,7 @@
+mutation test($_id:String!){
+ deleteLead(id: $_id){
+  id
+  status
+  message
+ }
+}

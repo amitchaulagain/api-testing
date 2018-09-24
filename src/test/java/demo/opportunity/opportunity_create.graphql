@@ -1,0 +1,3 @@
+mutation SomeTT($addOpportunity: AddOpportunityInput!)
+{addOpportunity(addOpportunityData:$addOpportunity)
+{id, status, data{opportunity_information{opportunity_name}, description}}}

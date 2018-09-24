@@ -1,0 +1,10 @@
+mutation test($updateTransaction: UpdateTransactionInput!,$id:String!){
+ updateTransaction(updateTransactionsData:$updateTransaction,id:$id){
+  id
+  status
+  data {
+   _id
+   name
+  }
+ }
+}

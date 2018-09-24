@@ -1,0 +1,1 @@
+mutation SomeTT($addLead: AddLeadInput!){addLead(addLeadData:$addLead){id, status,data{_id}}}

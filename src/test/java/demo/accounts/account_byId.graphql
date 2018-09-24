@@ -1,0 +1,24 @@
+query SomeTT($_id:String!){
+account(id: $_id){
+_id
+account{
+industry
+type
+}
+reference{
+data
+{
+type
+}
+module
+entity
+entity_id
+}
+emails{
+email_type
+value
+is_primary
+}
+name
+}
+}

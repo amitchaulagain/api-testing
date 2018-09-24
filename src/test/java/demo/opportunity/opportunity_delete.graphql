@@ -1,0 +1,1 @@
+mutation SomeTT($_id:String!){deleteProperty(id: $_id){id, status, message}}

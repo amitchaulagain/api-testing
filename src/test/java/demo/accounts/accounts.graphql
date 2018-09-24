@@ -1,0 +1,20 @@
+query SomeTT($param: RequestParamInput) {
+accounts(param: $param){
+data{
+_id
+account{
+industry
+type
+no_of_employees
+website
+}
+phone_number{
+phone_type
+value
+is_primary
+}
+offset
+total_count
+}
+}
+}

@@ -1,0 +1,15 @@
+mutation SomeTT($addAccount: AddAccountInput!){addAccount(addAccountData:$addAccount){
+id
+status
+data{
+account{
+industry
+type
+}
+name
+parent_account{
+_id
+}
+}
+}
+}

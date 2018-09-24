@@ -1,0 +1,7 @@
+query SomeTT($param: RequestParamInput) {opportunities(param: $param){
+ data{
+  _id,
+  opportunity_information{
+  opportunity_name, commission_total, stage
+  },
+  contact{_id,first_name,last_name}, description,opportunity_owner{_id,first_name,last_name},reference{module,entity,entity_id}, emails{email_type,value}},limit,offset,total_count}}

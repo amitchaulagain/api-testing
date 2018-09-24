@@ -1,0 +1,54 @@
+{
+  "addContact": {
+    "personal":  {
+      "first_name": "Babar",
+      "last_name": "Hayaat",
+      "middle_name": "Jonathan",
+      "contact_type": "58219bb36300000a014fbd43",
+      "salutation": "58244214640000330343a258"
+    },
+    "company":{
+      "_id": "5b5ec4fc0e00009c01fc527b",
+      "no_of_employees": "58295d735b0000192ef754ed",
+      "industry": "582427ba640000e50143a021",
+      "annual_revenue": 3524123.32,
+      "name": "Real State",
+      "website": "testwebsite"
+    },
+    "email": [
+      {
+        "value": "email",
+        "email_type": "58219bab6300000a014fbd32",
+        "is_primary": 0
+      }
+    ],
+    "phone_number": [
+      {
+        "phone_type": "582449b05a00009700b16b25",
+        "value": "0120200152",
+        "is_primary": 0
+      }],
+    "address":
+    {
+      "city": "58219bd86300000a014fbda7",
+      "country":  "58219be663000005014fbdc1",
+      "zip": "10450",
+      "mailing_street": "Kansas 420"
+
+    },
+    "job_title": "58219bc46300000a014fbd72",
+    "owner":  {
+      "_id": "5a9facc40e0000f007a1d2db",
+      "first_name": "De",
+      "last_name": "Bourah"
+    },
+    "lead": {
+      "_id": "555",
+      "first_name": "Gary",
+      "last_name": "Floura"
+
+
+
+    }
+  }
+}

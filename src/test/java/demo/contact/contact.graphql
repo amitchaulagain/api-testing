@@ -1,0 +1,13 @@
+query omeTT($param: RequestParamInput) {contacts(param: $param){
+   data{
+    _id
+    personal{
+        first_name
+        last_name
+        }
+        }
+    limit
+    offset
+    total_count
+    }
+   }

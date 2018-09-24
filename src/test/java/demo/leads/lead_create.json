@@ -1,0 +1,39 @@
+{
+
+  "addLead": {
+    "lead": {
+      "salutation": "582427be640000e50143a024",
+      "first_name": "Alexis",
+      "last_name": "Dicki",
+      "lead_status": "5a9687550c0000d1001f5354",
+      "lead_source": "5a937beb0e00005a689142c8",
+      "title": "583ea45e5e0000e902f4b578"
+    },
+    "description_information": "This is the test description",
+    "is_converted": false,
+    "phone_number": [{
+      "phone_type": "582449b05a00009700b16b25",
+      "value": "1839714639",
+      "is_primary": 0
+    }],
+    "emails": [{
+      "email_type": "58219bab6300000a014fbd32",
+      "value": "gqltest@api.com",
+      "is_primary": 0
+    }],
+    "address": {
+      "city": "58219bd86300000a014fbda7",
+      "country": "58219be663000005014fbdc1",
+      "zip": "10450",
+      "mailing_street": "Kansas 420",
+      "province": "New Castle"
+    },
+    "lead_owner": {
+      "_id": "58219bd86300000a014fbda7",
+      "first_name": "Dulce",
+      "last_name": "Auer"
+    }
+  }
+
+
+}
