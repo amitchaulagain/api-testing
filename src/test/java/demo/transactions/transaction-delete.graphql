@@ -1,7 +1,0 @@
-mutation test($_id:String!){
- deleteTransaction(id: $_id){
-  id
-  status
-  message
- }
-}

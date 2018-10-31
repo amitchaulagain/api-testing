@@ -1,0 +1,56 @@
+{
+  "addCase": {
+    "company": {
+      "_id":"5afd101f0c0000a501b47815"
+
+    } ,
+
+
+    "contact": {
+      "_id":"5b5ec4fc0e00009c01fc527b",
+      "first_name":"Patrick",
+      "last_name":"Ramos"
+
+    } ,
+
+    "access": "publicOpen",
+    "description":"Case Related Information",
+    "documents": [{"id": "MiniIdentifierId1"}, {"id": "MiniIdentifierId2"}],
+    "case_info": {
+      "escalation_level": "583bc9265c00001830c2d0cc",
+      "priority": "583bca195c00002530c2d0d3",
+      "resolution": "583bd4bb5c0000c730c2d18f",
+      "type": "583bb8835c0000252fc2cfd5",
+      "source": "583bcbd65c00004330c2d0d9",
+      "due_date": "2018-02-09T00:00:00.000Z",
+      "classifications": "1",
+      "channel": "583bcbb05c00003f30c2d0d7",
+      "status": "583bc9a75c00001f30c2d0d0",
+      "email": [
+        {
+          "email_type": "Lookup",
+          "value": "abc@abc.com"
+        },
+        {
+          "email_type": "Lookup",
+          "value": "xyz@xyz.com"
+        }
+      ],
+      "phone_number": [
+        {
+          "phone_type": "PhoneLookup",
+          "value": "0184012881"
+        },
+        {
+          "phone_type": "PhoneLookup",
+          "value": "0252012421"
+        }
+      ]
+
+    },
+    "icon": "Icon1",
+    "title": "Case Title",
+    "subject": "Company name not being published"
+  }
+
+}

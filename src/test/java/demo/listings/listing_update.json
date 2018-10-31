@@ -1,0 +1,156 @@
+{
+  "id": '#(created_id)',
+  "updateListing": {
+    "id": '#(created_id)',
+    "title": "Central Apartment1",
+    "listing_info": {
+      "listing_name": "Central Apartment",
+      "listing_status": "582567515a00009210b17eee",
+      "listing_type": "58219c1f63000013014fbde2",
+      "commencement_date": "2015-12-09T16:21:25.773+05:45",
+      "expiration_date": "2016-12-09T16:21:25.773+05:45",
+      "listing_method": "Newspaper",
+      "contract_number": "CN1224",
+      "price": 60000
+    },
+    "property": {
+      "_id": "5afd1b4d0c0000c404b479b7",
+      "title": "Luxury Apartment"
+    },
+    "parameter": {
+      "square_feet": {
+        "operator": "less_than",
+        "value": {
+          "value": 1112
+        }
+      },
+      "lot_size": {
+        "operator": "between",
+        "value": {
+          "min": 6,
+          "max": 10
+        }
+      },
+      "building_and_lot_parameter": {
+        "type_pick_list": "Multi Family",
+        "building_type": "Any",
+        "proximity": "1",
+        "year_built": {
+          "operator": "between",
+          "value": {
+            "min": 2000,
+            "max": 2018
+          }
+        }
+      },
+      "space_parameter": {
+        "floor_no": {
+          "operator": "less_than",
+          "value": {
+            "value": 8
+          }
+        },
+        "condition": "No",
+        "no_of_bed_room": {
+          "operator": "less_than",
+          "value": {
+            "value": 6
+          }
+        },
+        "no_of_bath_room": {
+          "operator": "between",
+          "value": {
+            "min": 9,
+            "max": 15
+          }
+        },
+        "building_structure": "Square",
+        "parking": "200 m"
+      }
+    },
+    "email": [
+      {
+        "email_type": "58219bad63000005014fbd36",
+        "value": "milan_rgm@yahoo.com",
+        "is_primary": 0
+      }
+    ],
+    "phone_number": [
+      {
+        "phone_type": "58219bad63000005014fbd36",
+        "value": "9841064000",
+        "is_primary": 0
+      }
+    ],
+    "address": {
+      "state": "4",
+      "location": "58219bdc6300000a014fbdaf",
+      "city": "58219bd86300000a014fbda7",
+      "country": "58219be363000005014fbdbb"
+    },
+    "building_and_lot": {
+      "owner": {
+        "_id": "5a647b370d0000b669650e0c",
+        "first_name": "Bailee",
+        "last_name": "Ledner",
+        "title": null
+      },
+      "lot_size": 5444,
+      "building_type": "Residental",
+      "proximity": "yes",
+      "intergenerational": "yes",
+      "year_built": "2017"
+    },
+    "space": {
+      "bath_room": 6,
+      "bed_room": 7,
+      "no_of_room": 6,
+      "parking_space": "100 m"
+    },
+    "assesment_and_taxes": {
+      "lot_assesment": "50000",
+      "total_assesment": "600000",
+      "building_assesment": "23333333",
+      "municipal_taxes": "6785",
+      "municipal_taxes_year": "2014",
+      "school_taxes": "50000",
+      "other_taxes": "7000",
+      "division_file_no": 7,
+      "location_file_no": 8,
+      "municipality_file_no": 9,
+      "section_file_no": 4
+    },
+    "description": {
+      "description": "Listing and Property description"
+    },
+    "owner": {
+      "_id": "5a647b370d0000b669650e0c",
+      "first_name": "Bailee",
+      "last_name": "Ledner",
+      "title": null
+    },
+    "meta": {
+      "_version": 2,
+      "_created": "2018-05-08T07:44:36.710+00:00",
+      "_created_by": {
+        "_id": "5ad5aebf580000ad00b7a7f9",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_last_modified": "2018-05-24T11:36:52.916+00:00",
+      "_modified_by": {
+        "_id": "59a3add54c0000a900fde07b",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_owner": {
+        "_id": "5ad5aebf580000ad00b7a7f9",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_member": "5a7989d20e00002f009687ce",
+      "_entity": "rms_listing",
+      "_module": "rms"
+    }
+  }
+}

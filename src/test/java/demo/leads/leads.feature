@@ -16,7 +16,8 @@ Feature: Test lead's feature
 
     And print input_lead
     And request { query: '#(query)',variables:'#(input_lead)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
@@ -34,7 +35,8 @@ Feature: Test lead's feature
     And def variables = { _id: '#(created_id)' }
     * print variables
     And request { query: '#(query)',variables:'#(variables)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
@@ -42,15 +44,36 @@ Feature: Test lead's feature
 
 
 
+     # here the query is read from a file
+    # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
+
+
+    Given def query = read('lead_update.graphql')
+
+    And def input_lead = read('lead_update.json')
+    And print input_lead
+    * print variables
+    And request { query: '#(query)',variables:'#(input_lead)' }
+    And header Authorization = rew3Token
+    And header Accept = 'application/json'
+    When method post
+    Then status 200
+    Then print response
+
+
+
     And def query = read('lead_delete.graphql')
     And def variables = { _id: '#(created_id)' }
     * print variables
     And request { query: '#(query)',variables:'#(variables)' }
-    And header Authorization = 'Bearer OWYwODcxOTEtNjQ0Yy00YjdkLTlhOWItYTNmOTI5ZGExMGUz'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
     And assert response.data.deleteLead.id==variables._id
+
+
 
 
   Scenario: Get All Lead
@@ -58,7 +81,8 @@ Feature: Test lead's feature
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
     Given def query = read('lead.graphql')
     And request { query: '#(query)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
@@ -66,21 +90,8 @@ Feature: Test lead's feature
 
 
 
-#  Scenario: Update  transaction
-#    # here the query is read from a file
-#    # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
-#
-#
-#    Given def query = read('transaction-update.graphql')
-#    And def input_transaction = read('transaction-update.json')
-#
-#    And print input_transaction
-#    And request { query: '#(query)',variables:'#(input_transaction)' }
-#    And header Authorization = 'Bearer ODg2NWNjMDktOWE3YS00MWZlLWE4ZDItMmFhY2FkMTJmZDQ3'
-#    And header Accept = 'application/json'
-#    When method post
-#    Then status 200
-#    Then print response
+
+
 
 
 

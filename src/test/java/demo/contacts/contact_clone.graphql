@@ -1,0 +1,1 @@
+mutation SomeTT($_id:String!){cloneContact(id: $_id){id, status}}

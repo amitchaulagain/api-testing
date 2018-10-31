@@ -1,0 +1,1 @@
+query SomeTT($param: RequestParamInput) {listings(param: $param){data{_id,title, listing_info{listing_name, price,listing_status,listing_type,commencement_date, expiration_date,listing_method,contract_number,price},meta{_created,_last_modified}, property{id,title}},limit,offset,total_count}}

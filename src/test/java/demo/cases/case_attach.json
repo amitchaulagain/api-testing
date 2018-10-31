@@ -1,0 +1,9 @@
+{
+  "case": {
+    "_id":'#(created_id)'
+  },
+  "module":"crm",
+  "entity":"crm_contact",
+  "entity_id":"5badbd480c0000fa1dbd3d97",
+  "type_data":"all"
+}

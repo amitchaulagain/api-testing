@@ -1,0 +1,1 @@
+mutation SomeTT($listingData: AddListingInput!){addListing(addListingData:$listingData){id, status, data{title,listing_info{listing_name,price}, property{id, title}}}}

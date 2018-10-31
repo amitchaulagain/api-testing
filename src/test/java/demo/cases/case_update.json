@@ -1,0 +1,66 @@
+{
+  "id": '#(created_id)',
+  "updateCase": {
+    "id": '#(created_id)',
+    "subject": "updateppp case from gql",
+    "description": "this is the case description",
+    "contact": {
+      "_id": "5afc3b750e0000c612725657",
+      "first_name": "Mrinali",
+      "last_name": "Murray"
+    },
+    "company": {
+      "_id": "5af8ee920d000066dbc0cf92",
+      "name": "Alexendra"
+    },
+    "case_info": {
+      "escalation_level": "583bc9225c00001530c2d0cb",
+      "priority": "583bca195c00002530c2d0d3",
+      "resolution": "583bd4bb5c0000c730c2d18f",
+      "source": "583bcbb05c00003f30c2d0d7",
+      "status": "583bc9865c00001c30c2d0cf",
+      "type": "583bb8835c0000252fc2cfd5",
+      "channel": "583bcbd65c00004330c2d0d9",
+      "classifications": "4",
+      "due_date": "2017-11-25T11:49:41.000+00:00",
+      "email": [{
+        "email_type": "58219bab6300000a014fbd32",
+        "value": "gqltest@api.com",
+        "is_primary": 0
+      }],
+      "phone_number": [{
+        "phone_type": "582449b05a00009700b16b25",
+        "value": "6727853400",
+        "is_primary": 0
+      }]
+    },
+    "meta": {
+      "_created_by": {
+        "_id": "59a3add54c0000a900fde07b",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_modified_by": {
+        "_id": "59a3add54c0000a900fde07b",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_owner": {
+        "_id": "58219bd86300000a014fbda7",
+        "first_name": "Huge",
+        "last_name": "Jackman"
+      },
+      "_version": 2,
+      "_created": "2018-09-17T14:06:09.702+0545",
+      "_last_modified": "2018-09-17T14:06:09.743+0545",
+      "_member": "5a7989d20e00002f009687ce",
+      "_entity":"case",
+      "_module":"crm_case"
+    }
+  },
+  "owner": {
+    "_id": "58219bd86300000a014fbda7",
+    "first_name": "Huge",
+    "last_name": "Jackman"
+  }
+}

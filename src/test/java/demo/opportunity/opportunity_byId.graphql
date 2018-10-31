@@ -1,0 +1,1 @@
+query SomeTT($_id:String!){opportunity(id: $_id){_id, opportunity_information{opportunity_name,commission, expected_revenue,  commission_total, stage},contact{_id,first_name,last_name},meta{_version, _created},description, reference{module,entity,entity_id},opportunity_owner{_id,first_name,last_name},emails{email_type,value}, competitors{competitor_name, website}}}

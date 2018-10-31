@@ -1,7 +1,7 @@
 {
-  "_id": "5af430100d00007b35c72b26",
+  "_id": '#(created_id)',
   "updateAccount": {
-    "id": "5af430100d00007b35c72b26",
+    "id": '#(created_id)',
     "account": {
 
       "industry": null,

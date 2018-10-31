@@ -1,0 +1,15 @@
+{
+  "listingData": {
+    "title": "First Listing",
+    "listing_info": {
+      "listing_name": "Listing Prop",
+      "price": 50000.435,
+      "listing_status": "list123",
+      "listing_type": "listype"
+    },
+    "property": {
+      "_id": "5b04452e0d00003b62728e31",
+      "title": "Alta"
+    }
+  }
+}

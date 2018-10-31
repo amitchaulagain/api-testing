@@ -1,1 +1,1 @@
-mutation SomeTT($_id:String!){deleteProperty(id: $_id){id, status, message}}
+mutation SomeTT($_id:String!){deleteOpportunity(id: $_id){id, status, message}}

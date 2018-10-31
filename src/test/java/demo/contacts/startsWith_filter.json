@@ -1,0 +1,8 @@
+{
+  "param":{
+    "filters": "personal.first_name-starts-with=A",
+    "limit":25,
+    "offset":0,
+    "sort": "{\"personal.first_name\":1}"
+  }
+}

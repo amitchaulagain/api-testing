@@ -1,0 +1,4 @@
+query SomeTT($param: RequestParamInput) {
+    cases(param: $param){
+        data{_id, company{no_of_employees, annual_revenue, name}, contact{_id, first_name, last_name}, description, documents{id},
+    case_info{escalation_level,priority,resolution,status,email{email_type, value},phone_number{phone_type, value}}, icon, title, subject},limit,offset,total_count}}

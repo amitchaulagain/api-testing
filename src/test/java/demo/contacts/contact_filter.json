@@ -1,0 +1,8 @@
+{
+  "param":{
+    "filters": "personal.first_name-non-empty",
+    "limit":25,
+    "offset":1,
+    "sort": "{\"personal.first_name\":1}"
+  }
+}

@@ -1,0 +1,7 @@
+mutation test($_id:String!){
+ deleteListing(id: $_id){
+  id
+  status
+  message
+ }
+}

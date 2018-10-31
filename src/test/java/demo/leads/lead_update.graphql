@@ -1,0 +1,1 @@
+mutation SomeTT($id:String!, $updateLead: UpdateLeadInput!){updateLead(updateLeadData:$updateLead, id: $id){id, status}}

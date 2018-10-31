@@ -1,0 +1,74 @@
+{
+  "id": '#(created_id)',
+  "updateOpportunity": {
+    "id": '#(created_id)',
+    "opportunity_information": {
+      "opportunity_name": "Meave",
+      "commission": 1000000,
+      "commission_total" : 50000,
+      "stage": "58219bb563000005014fbd4a",
+      "status": "5a9547a00e00008c001a8ae6",
+      "closing_date": "2018-05-29T18:15:00.000+00:00",
+      "probability": 100,
+      "lead_source": "5a937b760e000049689142c1",
+      "expected_revenue": 45000,
+      "amount": 45000,
+      "property":{
+        "_id":"591019cd4c00001501c2c61e",
+        "title":"New Property"
+      },
+      "company": {
+        "_id": "5afd11220c0000ad01b4782a",
+        "no_of_employees": "582961885b0000a82ef75516",
+        "name": "Magna International"
+      },
+      "campaign_source": {
+        "_id": "585d0fd35f00006100e717d9",
+        "campaign_name": "SportsCampaign"
+      },
+      "next_step":"Review"
+    },
+    "description" : "Testing Opportunity GraphQL",
+    "emails": [
+      {
+        "value": "bakes_carie@hotmail.com",
+        "email_type": "58219bab6300000a014fbd32",
+        "is_primary": 0
+      }
+    ],
+    "opportunity_owner": {
+      "_id": "5a6597e61000004c1f449c88",
+      "first_name": "Donald",
+      "last_name": "Clark"
+    },
+    "contact": {
+      "_id": "5a6597e61000004c1f449c8a",
+      "first_name": "Patrick",
+      "last_name": "Ramos"
+    }, "meta": {
+      "_version": 28,
+      "_created": "2018-01-22T12:51:13.975+00:00",
+      "_created_by": {
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_last_modified": "2018-03-22T14:17:26.768+00:00",
+      "_modified_by": {
+        "_id": "59a3add54c0000a900fde07b",
+        "first_name": "Roshan",
+        "last_name": "Sharma"
+      },
+      "_owner": {
+        "_id": "5a6597e61000004c1f449c88",
+        "first_name": "Donald",
+        "last_name": "Clark"
+      },
+      "_member": "5afbec8e0c0000df032f77a0",
+      "_entity": "crm_opportunity",
+      "_module": "crm"
+
+    }
+
+  }
+
+}

@@ -1,0 +1,1 @@
+mutation SomeTT($id:String!, $updateCase: UpdateCaseInput!){updateCase(updateCaseData:$updateCase, id: $id){id, status,message}}

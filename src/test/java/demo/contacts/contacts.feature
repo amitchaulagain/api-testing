@@ -16,7 +16,8 @@ Feature: Test contact's feature
 
     And print input_contact
     And request { query: '#(query)',variables:'#(input_contact)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
@@ -34,23 +35,57 @@ Feature: Test contact's feature
     And def variables = { _id: '#(created_id)' }
     * print variables
     And request { query: '#(query)',variables:'#(variables)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
     And assert response.data.contact._id==variables._id
 
 
+    # here the query is read from a file
+    # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
+
+
+    Given def query = read('contact_update.graphql')
+    And def input_contact = read('contact_update.json')
+    And def variables = { _id: '#(created_id)' }
+        And request { query: '#(query)',variables:'#(variables)' }
+        And header Authorization = rew3Token
+
+        And header Accept = 'application/json'
+        When method post
+        Then status 200
+        And assert response.data.contact._id==variables._id
+
+  #clone contacts
+
+   Given def query = read('contact_clone.graphql')
+      And def input_contact = read('contact_clone.json')
+      And print input_contact
+      And request { query: '#(query)',variables:'#(input_contact)' }
+      And header Authorization = rew3Token
+      * print rew3Token
+      And header Accept = 'application/json'
+      When method post
+      Then status 200
+
+      * def created_id = response.data.addContact.id
+
 
     And def query = read('contact_delete.graphql')
     And def variables = { _id: '#(created_id)' }
     * print variables
     And request { query: '#(query)',variables:'#(variables)' }
-    And header Authorization = 'Bearer OWYwODcxOTEtNjQ0Yy00YjdkLTlhOWItYTNmOTI5ZGExMGUz'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
 
+  Scenario: Attach And Detach Contacts
+  #For attach and detach contacts
+  * print created_id
 
 
   Scenario: Get All Contact
@@ -58,29 +93,67 @@ Feature: Test contact's feature
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
     Given def query = read('contacts.graphql')
     And request { query: '#(query)' }
-    And header Authorization = 'Bearer ZDNkNWU2YjEtNTI5MC00MjAyLWEyM2EtYTQxMDVhYmIxNmE0'
+    And header Authorization = rew3Token
+    * print rew3Token
     And header Accept = 'application/json'
     When method post
     Then status 200
 
 
+  Scenario: Filtering and Sorting Contacts
 
 
-  Scenario: Update  Contact
-    # here the query is read from a file
-    # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
+  #Filtering with starts with
+
+          Given def query = read('filter.graphql')
+              And def input_filter = read('startsWith_filter.json')
+              And request { query: '#(query)',variables:'#(input_filter)' }
+              And header Authorization = rew3Token
+              * print rew3Token
+              And header Accept = 'application/json'
+              When method post
+              Then status 200
+              Then print $
+
+   ##filtering with date range
+
+  Given def query = read('filter.graphql')
+                And def input_filter = read('range_filter.json')
+                And request { query: '#(query)',variables:'#(input_filter)' }
+                And header Authorization = rew3Token
+                * print rew3Token
+                And header Accept = 'application/json'
+                When method post
+                Then status 200
+                Then print response
+
+  ##filtering with date range
+
+    Given def query = read('filter.graphql')
+      And def input_filter = read('is_filter.json')
+      And request { query: '#(query)',variables:'#(input_filter)' }
+      And header Authorization = rew3Token
+      * print rew3Token
+      And header Accept = 'application/json'
+      When method post
+      Then status 200
+      Then print response
 
 
-    Given def query = read('contact_update.graphql')
-    And def input_transaction = read('contact_update.json')
+    #sorting and filtering
 
-    And print input_contact
-    And request { query: '#(query)',variables:'#(input_contact)' }
-    And header Authorization = 'Bearer ODg2NWNjMDktOWE3YS00MWZlLWE4ZDItMmFhY2FkMTJmZDQ3'
-    And header Accept = 'application/json'
-    When method post
-    Then status 200
-    Then print response
+    Given def query = read('filter.graphql')
+        And def input_filter = read('contact_filter.json')
+        And request { query: '#(query)',variables:'#(input_filter)' }
+        And header Authorization = rew3Token
+        * print rew3Token
+        And header Accept = 'application/json'
+        When method post
+        Then status 200
+        Then print response
+        ##---ToDo validation
+
+
 
 
 
