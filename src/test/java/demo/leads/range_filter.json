@@ -1,0 +1,8 @@
+{
+  "param": {
+    "filters": "meta._created=[2018-01-08,2018-01-22]",
+    "sort": "{\"lead.first_name\":1}",
+    "offset": 0,
+    "limit":200
+  }
+}

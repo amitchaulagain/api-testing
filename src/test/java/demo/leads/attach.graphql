@@ -1,0 +1,1 @@
+mutation MainList( $lead: LeadMiniInput!, $module: String!, $entity: String!, $entity_id: String!, $type_data: String!) {attachLead(toAttachLead: $lead, type: $type_data,entityId: $entity_id,entity: $entity,module: $module) {id, status, message}}

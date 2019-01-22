@@ -1,0 +1,8 @@
+{
+  "param":{
+    "filters": "meta._created=today",
+    "limit":25,
+    "offset":0,
+    "sort": "{\"name\":1}"
+  }
+}

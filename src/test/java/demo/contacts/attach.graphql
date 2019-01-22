@@ -1,0 +1,1 @@
+mutation MainList( $contact: ContactMiniInput!, $module: String!, $entity: String!, $entity_id: String!, $type_data: String!) {attachContact(toAttachContact: $contact, type: $type_data,entityId: $entity_id,entity: $entity,module: $module) {id,status,message}}

@@ -1,0 +1,1 @@
+mutation MainList( $opportunity: OpportunityMiniInput!, $module: String!, $entity: String!, $entity_id: String!, $type_data: String!) {attachOpportunity(toAttachOpportunity: $opportunity, type: $type_data,entityId: $entity_id,entity: $entity,module: $module) {id, status, message}}

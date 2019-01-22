@@ -1,0 +1,7 @@
+{
+  "param": {
+    "filters":"lead.first_name-is=Rahul",
+    "offset": 0,
+    "limit":100
+  }
+}

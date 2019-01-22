@@ -1,0 +1,7 @@
+{
+  "param": {
+    "filters": "meta._created=[2018-01-08,2018-01-22]",
+    "offset": 0,
+    "limit":200
+  }
+}

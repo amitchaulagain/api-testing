@@ -1,0 +1,8 @@
+{
+  "param": {
+    "filters": "lead.first_name-starts-with=R",
+    "sort": "{\"lead.first_name\":1}",
+    "offset": 0,
+    "limit":200
+  }
+}

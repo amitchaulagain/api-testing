@@ -1,0 +1,8 @@
+{
+  "param":{
+    "filters": "opportunity_information.opportunity_name-empty",
+    "limit":25,
+    "offset":0,
+    "sort": "{\"personal.first_name\":1}"
+  }
+}

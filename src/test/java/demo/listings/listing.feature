@@ -6,7 +6,7 @@ Feature: Test Listing's feature
 ## * url 'https://graphql-pokemon.now.sh'
 #
 
-  Scenario: Create  Listing
+  Scenario: Actions and Relations (Create, Update, Clone, Delete, Attach, Detach)
     # here the query is read from a file
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
 
@@ -72,7 +72,7 @@ Feature: Test Listing's feature
     Then status 200
 
 
- Scenario: Get All Listings
+  Scenario: Views (Get All, Get All with Selected Fields)
 
     # here the query is read from a file
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building

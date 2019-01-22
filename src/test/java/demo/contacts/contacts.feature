@@ -6,7 +6,7 @@ Feature: Test contact's feature
 ## * url 'https://graphql-pokemon.now.sh'
 #
 
-  Scenario: Create  Contacts
+  Scenario: Actions and Relations (Create, Update, Clone, Delete, Attach, Detach)
     # here the query is read from a file
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
 
@@ -56,11 +56,11 @@ Feature: Test contact's feature
         And header Accept = 'application/json'
         When method post
         Then status 200
-        And assert response.data.contact._id==variables._id
 
   #clone contacts
 
    Given def query = read('contact_clone.graphql')
+   And def variables = { _id: '#(created_id)' }
       And def input_contact = read('contact_clone.json')
       And print input_contact
       And request { query: '#(query)',variables:'#(input_contact)' }
@@ -70,8 +70,21 @@ Feature: Test contact's feature
       When method post
       Then status 200
 
-      * def created_id = response.data.addContact.id
+      * def clone_id = response.data.cloneContact.id
 
+      ##delete cloned contact
+
+    And def query = read('contact_delete.graphql')
+        And def variables = { _id: '#(clone_id)' }
+        * print variables
+        And request { query: '#(query)',variables:'#(variables)' }
+        And header Authorization = rew3Token
+        * print rew3Token
+        And header Accept = 'application/json'
+        When method post
+        Then status 200
+
+        ##delete contact
 
     And def query = read('contact_delete.graphql')
     And def variables = { _id: '#(created_id)' }
@@ -83,12 +96,36 @@ Feature: Test contact's feature
     When method post
     Then status 200
 
-  Scenario: Attach And Detach Contacts
-  #For attach and detach contacts
-  * print created_id
+
+    ##Attach Detach
+
+  Given def query = read('attach.graphql')
+
+          And def input_contact = read('attachDetach.json')
+          And print input_contact
+          * print variables
+          And request { query: '#(query)',variables:'#(input_contact)' }
+          And header Authorization = rew3Token
+          And header Accept = 'application/json'
+          When method post
+          Then status 200
+          Then print response
 
 
-  Scenario: Get All Contact
+      Given def query = read('detach.graphql')
+
+       And def input_contact = read('attachDetach.json')
+       And print input_contact
+       * print variables
+       And request { query: '#(query)',variables:'#(input_contact)' }
+       And header Authorization = rew3Token
+       And header Accept = 'application/json'
+       When method post
+       Then status 200
+       Then print response
+
+
+  Scenario: Views (Get All, Get All with Selected Fields)
     # here the query is read from a file
     # note that the 'replace' keyword (not used here) can also be very useful for dynamic query building
     Given def query = read('contacts.graphql')
@@ -100,7 +137,7 @@ Feature: Test contact's feature
     Then status 200
 
 
-  Scenario: Filtering and Sorting Contacts
+  Scenario: Filters (Filter by Conditions and Sort Ascending, Descending)
 
 
   #Filtering with starts with

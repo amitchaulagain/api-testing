@@ -1,0 +1,9 @@
+{
+  "lead": {
+    "_id":'#(created_id)'
+  },
+  "module":"collaboration",
+  "entity":"collaboration_campaign",
+  "entity_id":"5bb5c40c0d0000db050b8ddb",
+  "type_data":"all"
+}

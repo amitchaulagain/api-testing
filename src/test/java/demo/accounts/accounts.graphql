@@ -1,20 +1,5 @@
-query SomeTT($param: RequestParamInput) {
-accounts(param: $param){
-data{
-_id
-account{
-industry
-type
-no_of_employees
-website
-}
-phone_number{
-phone_type
-value
-is_primary
-}
-offset
-total_count
-}
-}
-}
+	query SomeTT($param: RequestParamInput)
+	{accounts(param: $param){data
+	{_id, account{industry, type, no_of_employees, website},
+	phone_number{phone_type, value, is_primary},address{city,country,zip},
+	emails{email_type,value,is_primary},reference{module,entity,entity_id},name, owner{first_name,last_name}},limit,offset,total_count}}

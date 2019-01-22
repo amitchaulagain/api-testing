@@ -1,0 +1,1 @@
+mutation MainList( $account: AccountMiniInput!, $module: String!, $entity: String!, $entity_id: String!, $type_data: String!) {attachAccount(toAttachAccount: $account, type: $type_data,entityId: $entity_id,entity: $entity,module: $module) {id}}
